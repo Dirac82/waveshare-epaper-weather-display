@@ -9,6 +9,13 @@ class OpenWeatherMap(BaseWeatherProvider):
         self.location_long = location_long
         self.units = units
 
+    # Build the URL for the API call
+    def get_url(self):
+        url = ("https://api.openweathermap.org/data/3.0/onecall?lat={}&lon={}&exclude=current,minutely&units={}&appid={}"
+               .format(self.location_lat, self.location_long, self.units, self.openweathermap_apikey))
+
+        return url
+
     # Map OpenWeatherMap icons to local icons
     # Reference: https://openweathermap.org/weather-conditions
     def get_icon_from_openweathermap_weathercode(self, weathercode, is_daytime):
@@ -82,8 +89,7 @@ class OpenWeatherMap(BaseWeatherProvider):
     # https://openweathermap.org/api/one-call-api
     def get_weather(self):
 
-        url = ("https://api.openweathermap.org/data/3.0/onecall?lat={}&lon={}&exclude=current,minutely&units={}&appid={}"
-               .format(self.location_lat, self.location_long, self.units, self.openweathermap_apikey))
+        url = self.get_url()
         response_data = self.get_response_json(url)
         logging.debug(response_data)
         weather_data = response_data["daily"][0]
@@ -97,3 +103,45 @@ class OpenWeatherMap(BaseWeatherProvider):
         weather["description"] = weather_data["weather"][0]["description"].title()
         logging.debug(weather)
         return weather
+
+    def get_hourly_forecast(self):
+        url = self.get_url()
+        response_data = self.get_response_json(url)
+        logging.debug(response_data)
+        weather_data = response_data["hourly"]
+        hour_data = []
+        for hour_entry in weather_data:
+            entry = {}
+            entry["dt"] = hour_entry["dt"]
+            entry["temperature"] = hour_entry["temp"]
+            entry["pop"] = hour_entry["pop"]
+            entry["feels_like"] = hour_entry["feels_like"]
+            entry["wind_speed"] = hour_entry["wind_speed"]
+            entry["clouds"] = hour_entry["clouds"]
+            entry["icon"] = self.get_icon_from_openweathermap_weathercode(hour_entry["weather"][0]["id"], self.is_daytime(self.location_lat, self.location_long))
+            entry["description"] = hour_entry["weather"][0]["description"].title()
+            logging.debug(entry)
+            hour_data.append(entry)
+
+        return hour_data
+
+    def get_daily_forecast(self):
+        url = self.get_url()
+        response_data = self.get_response_json(url)
+        logging.debug(response_data)
+        weather_data = response_data["daily"]
+        daily_data = []
+        for day_entry in weather_data:
+            entry = {}
+            entry["dt"] = day_entry["dt"]
+            entry["temperatureMin"] = day_entry["temp"]["min"]
+            entry["temperatureMax"] = day_entry["temp"]["max"]
+            entry["pop"] = day_entry["pop"]
+            entry["wind_speed"] = day_entry["wind_speed"]
+            entry["clouds"] = day_entry["clouds"]
+            entry["icon"] = self.get_icon_from_openweathermap_weathercode(day_entry["weather"][0]["id"], self.is_daytime(self.location_lat, self.location_long))
+            entry["description"] = day_entry["weather"][0]["description"].title()
+            logging.debug(entry)
+            daily_data.append(entry)
+
+        return daily_data

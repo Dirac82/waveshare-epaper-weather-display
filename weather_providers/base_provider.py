@@ -21,6 +21,42 @@ class BaseWeatherProvider(ABC):
         """
         pass
 
+    @abstractmethod
+    def get_hourly_forecast(self):
+        """
+        Implement this method.
+        Return an array of dictionaries in this format:
+        [{ "dt": "1745866800",
+           "temperature": "2.0",
+           "feels_like": "14.74",
+           "pop": "0",
+           "wind_speed": "1.92",
+           "clouds": 76,
+           "icon": "mostly_cloudy",
+           "description": "Cloudy with light breezes"},
+         {...}
+        ]
+        """
+        pass
+
+    @abstractmethod
+    def get_daily_forecast(self):
+        """
+        Implement this method.
+        Return an array of dictionaries in this format:
+        [{ "dt": "1745866800",
+           "temperatureMin": "2.0",
+           "temperatureMax": "12.0",
+           "pop": "0",
+           "wind_speed": "1.92",
+           "clouds": 76,
+           "icon": "mostly_cloudy",
+           "description": "Cloudy with light breezes"},
+         {...}
+        ]
+        """
+        pass
+
     def f_to_c(self, fahrenheit):
         """
         Return the Celsius value from a given Fahrenheit
