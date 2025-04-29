@@ -52,7 +52,7 @@
         <tspan x="570" dy="20">Regen: W_DAY_POP_1 Wolken: W_DAY_CLOUDS_1</tspan>
     </text>
 
-    <text id="dayentry2" x="330" y="195" font-size="17px" style="font-size:17px;line-height:0%;font-family:sans-serif;text-anchor:beginning">
+    <text id="dayentry2" x="565" y="195" font-size="17px" style="font-size:17px;line-height:0%;font-family:sans-serif;text-anchor:beginning">
         <tspan x="565" dy="20" style="font-weight:bold;">WEATHER_DAY_DATETIME_2</tspan><tspan x="625" dy="0">WEATHER_DAY_DESC_2</tspan>
         <tspan x="570" dy="20">W_DAY_TEMP_MAX_2 / W_DAY_TEMP_MIN_2</tspan>
         <tspan x="570" dy="20">Regen: W_DAY_POP_2 Wolken: W_DAY_CLOUDS_2</tspan>
