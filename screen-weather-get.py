@@ -4,9 +4,7 @@ import datetime
 import sys
 import os
 import logging
-from weather_providers import climacell, openweathermap, metofficedatahub, metno, meteireann, accuweather, visualcrossing, weathergov, smhi
-from alert_providers import metofficerssfeed, weathergovalerts
-from alert_providers import meteireann as meteireannalertprovider
+from weather_providers import openweathermap
 from utility import get_formatted_time, update_svg, configure_logging, configure_locale
 import textwrap
 import html
@@ -29,62 +27,15 @@ def format_weather_description(weather_description):
 def get_weather(location_lat, location_long, units):
 
     # gather relevant environment configs
-    climacell_apikey = os.getenv("CLIMACELL_APIKEY")
     openweathermap_apikey = os.getenv("OPENWEATHERMAP_APIKEY")
-    metoffice_apikey = os.getenv("METOFFICEDATAHUB_API_KEY")
-    accuweather_apikey = os.getenv("ACCUWEATHER_APIKEY")
-    accuweather_locationkey = os.getenv("ACCUWEATHER_LOCATIONKEY")
-    metno_self_id = os.getenv("METNO_SELF_IDENTIFICATION")
-    visualcrossing_apikey = os.getenv("VISUALCROSSING_APIKEY")
-    use_met_eireann = os.getenv("WEATHER_MET_EIREANN")
-    weathergov_self_id = os.getenv("WEATHERGOV_SELF_IDENTIFICATION")
-    smhi_self_id = os.getenv("SMHI_SELF_IDENTIFICATION")
 
     if (
-        not climacell_apikey
-        and not openweathermap_apikey
-        and not metoffice_apikey
-        and not accuweather_apikey
-        and not metno_self_id
-        and not visualcrossing_apikey
-        and not use_met_eireann
-        and not weathergov_self_id
-        and not smhi_self_id
+        not openweathermap_apikey
     ):
-        logging.error("No weather provider has been configured (Climacell, OpenWeatherMap, Weather.gov, MetOffice, AccuWeather, Met.no, Met Eireann, VisualCrossing...)")
+        logging.error("No weather provider has been configured (OpenWeatherMap)")
         sys.exit(1)
 
-    if visualcrossing_apikey:
-        logging.info("Getting weather from Visual Crossing")
-        weather_provider = visualcrossing.VisualCrossing(visualcrossing_apikey, location_lat, location_long, units)
-
-    elif use_met_eireann:
-        logging.info("Getting weather from Met Eireann")
-        weather_provider = meteireann.MetEireann(location_lat, location_long, units)
-
-    elif weathergov_self_id:
-        logging.info("Getting weather from Weather.gov")
-        weather_provider = weathergov.WeatherGov(weathergov_self_id, location_lat, location_long, units)
-
-    elif metno_self_id:
-        logging.info("Getting weather from Met.no")
-        weather_provider = metno.MetNo(metno_self_id, location_lat, location_long, units)
-
-    elif accuweather_apikey:
-        logging.info("Getting weather from Accuweather")
-        weather_provider = accuweather.AccuWeather(accuweather_apikey, location_lat,
-                                                   location_long,
-                                                   accuweather_locationkey,
-                                                   units)
-
-    elif metoffice_apikey:
-        logging.info("Getting weather from Met Office Weather Datahub")
-        weather_provider = metofficedatahub.MetOffice(metoffice_apikey,
-                                                      location_lat,
-                                                      location_long,
-                                                      units)
-
-    elif openweathermap_apikey:
+    if openweathermap_apikey:
         logging.info("Getting weather from OpenWeatherMap")
         weather_provider = openweathermap.OpenWeatherMap(openweathermap_apikey,
                                                          location_lat,
@@ -95,46 +46,9 @@ def get_weather(location_lat, location_long, units):
         daily_weather = weather_provider.get_daily_forecast()
         logging.info("daily_forecast[{}] - {}".format(len(daily_weather), daily_weather))
 
-    elif climacell_apikey:
-        logging.info("Getting weather from Climacell")
-        weather_provider = climacell.Climacell(climacell_apikey, location_lat, location_long, units)
-
-    elif smhi_self_id:
-        logging.info("Getting weather from SMHI")
-        weather_provider = smhi.SMHI(smhi_self_id, location_lat, location_long, units)
-
     weather = weather_provider.get_weather()
     logging.info("weather - {}".format(weather))
     return weather
-
-
-def format_alert_description(alert_message):
-    return html.escape(alert_message)
-
-
-def get_alert_message(location_lat, location_long):
-    alert_message = ""
-    alert_metoffice_feed_url = os.getenv("ALERT_METOFFICE_FEED_URL")
-    alert_weathergov_self_id = os.getenv("ALERT_WEATHERGOV_SELF_IDENTIFICATION")
-    alert_meteireann_feed_url = os.getenv("ALERT_MET_EIREANN_FEED_URL")
-
-    if alert_weathergov_self_id:
-        logging.info("Getting weather alert from Weather.gov API")
-        alert_provider = weathergovalerts.WeatherGovAlerts(location_lat, location_long, alert_weathergov_self_id)
-        alert_message = alert_provider.get_alert()
-
-    elif alert_metoffice_feed_url:
-        logging.info("Getting weather alert from Met Office RSS Feed")
-        alert_provider = metofficerssfeed.MetOfficeRssFeed(alert_metoffice_feed_url)
-        alert_message = alert_provider.get_alert()
-
-    elif alert_meteireann_feed_url:
-        logging.info("Getting weather alert from Met Eireann")
-        alert_provider = meteireannalertprovider.MetEireannAlertProvider(alert_meteireann_feed_url)
-        alert_message = alert_provider.get_alert()
-
-    logging.info("alert - {}".format(alert_message))
-    return alert_message
 
 
 def main():
@@ -159,9 +73,6 @@ def main():
 
     weather_desc = format_weather_description(weather["current"]["description"])
 
-    alert_message = get_alert_message(location_lat, location_long)
-    alert_message = format_alert_description(alert_message)
-
     time_now = get_formatted_time(datetime.datetime.now())
     time_now_font_size = "100px"
 
@@ -179,8 +90,7 @@ def main():
         'HOUR_NOW': datetime.datetime.now().strftime("%-I %p"),
         'DAY_ONE': datetime.datetime.now().strftime("%b %-d, %Y"),
         'DAY_NAME': datetime.datetime.now().strftime("%A"),
-        'ALERT_MESSAGE_VISIBILITY': "visible" if alert_message else "hidden",
-        'ALERT_MESSAGE': alert_message,
+        'ALERT_MESSAGE_VISIBILITY': "hidden",
         'WEATHER_HOUR_DATETIME_1': datetime.datetime.fromtimestamp(weather["hourly"][1]["dt"]).strftime("%I %p"),
         'W_HOUR_TEMP_1': "{}{}".format(str(round(weather["hourly"][1]["temperature"])), degrees),
         'W_HOUR_FEEL_1': "{}{}".format(str(round(weather["hourly"][1]["feels_like"])), degrees),
