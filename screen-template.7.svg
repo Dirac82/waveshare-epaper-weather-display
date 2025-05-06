@@ -157,27 +157,27 @@
         <g id="g110">
             <rect id="bg_h10" x="688" y="88" width="50" height="195" />
             <text x="691" y="92" id="hour_10">
-                <tspan x="691" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">WEATHER_HOUR_DATETIME_10</tspan>
-                <tspan x="691" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_TEMP_10</tspan>
+                <tspan x="691" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">WEATHER_HOUR_DATETIME_A</tspan>
+                <tspan x="691" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_TEMP_A</tspan>
                 <tspan x="691" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">gefühlt</tspan>
-                <tspan x="691" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_FEEL_10</tspan>
+                <tspan x="691" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_FEEL_A</tspan>
                 <tspan x="691" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Regen</tspan>
-                <tspan x="691" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_POP_10</tspan>
+                <tspan x="691" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_POP_A</tspan>
                 <tspan x="691" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Wolken</tspan>
-                <tspan x="691" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_CLOUDS_10</tspan>
+                <tspan x="691" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_CLOUDS_A</tspan>
             </text>
         </g>
         <g id="g111">
             <rect id="bg_h11" x="738" y="88" width="50" height="195" style="fill:#ffffff" />
             <text x="741" y="92" id="hour_1">
-                <tspan x="741" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_11</tspan>
-                <tspan x="741" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_11</tspan>
+                <tspan x="741" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_B</tspan>
+                <tspan x="741" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_B</tspan>
                 <tspan x="741" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">gefühlt</tspan>
-                <tspan x="741" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_FEEL_11</tspan>
+                <tspan x="741" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_FEEL_B</tspan>
                 <tspan x="741" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Regen</tspan>
-                <tspan x="741" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_11</tspan>
+                <tspan x="741" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_B</tspan>
                 <tspan x="741" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Wolken</tspan>
-                <tspan x="741" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_CLOUDS_11</tspan>
+                <tspan x="741" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_CLOUDS_B</tspan>
             </text>
         </g>
     </g>
