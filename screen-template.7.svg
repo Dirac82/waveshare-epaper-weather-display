@@ -9,6 +9,8 @@
         style="clip-rule:evenodd;fill-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5"
         id="svg96"
         xmlns="http://www.w3.org/2000/svg">
+    <rect width="800" height="480" id="fullbackground" fill="#ffffff" />
+
     <g id="heading">
         <text x="10" y="71.541641"
               style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:85.3333px;font-family:Roboto;"
