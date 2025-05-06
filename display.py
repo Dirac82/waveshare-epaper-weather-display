@@ -3,7 +3,7 @@ import sys
 import os
 import logging
 import datetime
-from PIL import Image
+from PIL import Image, ImageChops
 from utility import configure_logging
 
 libdir = "./lib/e-Paper/RaspberryPi_JetsonNano/python/lib"
@@ -40,8 +40,9 @@ try:
     logging.info("Display image file on screen")
 
     if waveshare_epd75_version == "2B":
-        Limage_Other = Image.new('1', (epd.height, epd.width), 255)  # 255: clear the frame
-        epd.display(epd.getbuffer(Himage), epd.getbuffer(Limage_Other))
+        R, G, B = Himage.split()
+        Red = ImageChops.invert(ImageChops.subtract(R, B))
+        epd.display(epd.getbuffer(Himage), epd.getbuffer(Red))
     else:
         epd.display(epd.getbuffer(Himage))
     epd.sleep()
