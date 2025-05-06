@@ -12,170 +12,172 @@
     <g id="heading">
         <text x="10" y="71.541641"
               style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:85.3333px;font-family:Roboto;"
-              id="time">23:40</text>
+              id="time">TIME_NOW</text>
         <text x="780" y="50.625" text-anchor="end"
               style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:53.3333px;font-family:Roboto;"
-              id="date">Dienstag, 29. April</text>
+              id="date">DAY_ONE</text>
     </g>
     <g id="Current-Weather">
         <rect id="bg_current" x="15" y="88" width="220" height="195" style="fill:#ffffff;" />
 
-        <image id="currentweathericon" x="20" y="100" width="100" height="100" href="icons/ICON_ONE.svg" />
+        <image id="currentweathericon" x="20" y="100" width="100" height="100" href="./icons/ICON_ONE.svg" />
 
         <g id="current_temps" >
             <text x="155" y="112">
                 <tspan x="155" dy="0" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:22px;font-family:Roboto;">min</tspan>
-                <tspan x="155" dy="27.5" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28px;font-family:Roboto;">10°C</tspan>
+                <tspan x="155" dy="27.5" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28px;font-family:Roboto;">LOW_ONE</tspan>
                 <tspan x="155" dy="30" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:22px;font-family:Roboto;">max</tspan>
-                <tspan x="155" dy="27.5" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28px;font-family:Roboto;">30°C</tspan>
+                <tspan x="155" dy="27.5" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28px;font-family:Roboto;">HIGH_ONE</tspan>
             </text>
         </g>
-        <text x="125" y="255" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:28px;font-family:Roboto;"
-                id="current_description" text-anchor="middle">Clear Sky</text>
+        <text x="125" y="235">
+            <tspan x="125" dy="10" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:28px;font-family:Roboto;" id="current_description_1" text-anchor="middle">WEATHER_DESC_1</tspan>
+            <tspan x="125" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:28px;font-family:Roboto;" id="current_description_2" text-anchor="middle">WEATHER_DESC_2</tspan>
+        </text>
     </g>
 
     <g id="Hourly-Forecast">
         <g id="g102">
             <rect id="bg_h1" x="238" y="88" width="50" height="195" style="fill:#ffffff" />
             <text x="241" y="92" id="hour_1">
-                <tspan x="241" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">00</tspan>
-                <tspan x="241" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">10°C</tspan>
+                <tspan x="241" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_1</tspan>
+                <tspan x="241" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_1</tspan>
                 <tspan x="241" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">gefühlt</tspan>
-                <tspan x="241" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">11°C</tspan>
+                <tspan x="241" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_FEEL_1</tspan>
                 <tspan x="241" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Regen</tspan>
-                <tspan x="241" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">20%</tspan>
+                <tspan x="241" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_1</tspan>
                 <tspan x="241" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Wolken</tspan>
-                <tspan x="241" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">25%</tspan>
+                <tspan x="241" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_CLOUDS_1</tspan>
             </text>
         </g>
         <g id="g103">
             <rect id="bg_h2" x="288" y="88" width="50" height="195" />
             <text x="291" y="92" id="hour_2">
-                <tspan x="291" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">01</tspan>
-                <tspan x="291" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">10°C</tspan>
+                <tspan x="291" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">WEATHER_HOUR_DATETIME_2</tspan>
+                <tspan x="291" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_TEMP_2</tspan>
                 <tspan x="291" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">gefühlt</tspan>
-                <tspan x="291" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">11°C</tspan>
+                <tspan x="291" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_FEEL_2</tspan>
                 <tspan x="291" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Regen</tspan>
-                <tspan x="291" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">20%</tspan>
+                <tspan x="291" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_POP_2</tspan>
                 <tspan x="291" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Wolken</tspan>
-                <tspan x="291" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">25%</tspan>
+                <tspan x="291" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_CLOUDS_2</tspan>
             </text>
         </g>
         <g id="g104">
             <rect id="bg_h3" x="338" y="88" width="50" height="195" style="fill:#ffffff" />
             <text x="341" y="92" id="hour_3">
-                <tspan x="341" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">02</tspan>
-                <tspan x="341" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">10°C</tspan>
+                <tspan x="341" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_3</tspan>
+                <tspan x="341" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_3</tspan>
                 <tspan x="341" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">gefühlt</tspan>
-                <tspan x="341" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">11°C</tspan>
+                <tspan x="341" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_FEEL_3</tspan>
                 <tspan x="341" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Regen</tspan>
-                <tspan x="341" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">20%</tspan>
+                <tspan x="341" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_3</tspan>
                 <tspan x="341" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Wolken</tspan>
-                <tspan x="341" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">25%</tspan>
+                <tspan x="341" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_CLOUDS_3</tspan>
             </text>
         </g>
         <g id="g105">
             <rect id="bg_h4" x="388" y="88" width="50" height="195" />
             <text x="391" y="92" id="hour_4">
-                <tspan x="391" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">03</tspan>
-                <tspan x="391" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">10°C</tspan>
+                <tspan x="391" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">WEATHER_HOUR_DATETIME_4</tspan>
+                <tspan x="391" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_TEMP_4</tspan>
                 <tspan x="391" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">gefühlt</tspan>
-                <tspan x="391" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">11°C</tspan>
+                <tspan x="391" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_FEEL_4</tspan>
                 <tspan x="391" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Regen</tspan>
-                <tspan x="391" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">20%</tspan>
+                <tspan x="391" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_POP_4</tspan>
                 <tspan x="391" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Wolken</tspan>
-                <tspan x="391" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">25%</tspan>
+                <tspan x="391" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_CLOUDS_4</tspan>
             </text>
         </g>
         <g id="g106">
             <rect id="bg_h5" x="438" y="88" width="50" height="195" style="fill:#ffffff" />
             <text x="441" y="92" id="hour_5">
-                <tspan x="441" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">04</tspan>
-                <tspan x="441" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">10°C</tspan>
+                <tspan x="441" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_5</tspan>
+                <tspan x="441" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_5</tspan>
                 <tspan x="441" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">gefühlt</tspan>
-                <tspan x="441" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">11°C</tspan>
+                <tspan x="441" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_FEEL_5</tspan>
                 <tspan x="441" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Regen</tspan>
-                <tspan x="441" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">20%</tspan>
+                <tspan x="441" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_5</tspan>
                 <tspan x="441" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Wolken</tspan>
-                <tspan x="441" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">25%</tspan>
+                <tspan x="441" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_CLOUDS_5</tspan>
             </text>
         </g>
         <g id="g106">
             <rect id="bg_h6" x="488" y="88" width="50" height="195" />
             <text x="491" y="92" id="hour_6">
-                <tspan x="491" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">05</tspan>
-                <tspan x="491" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">10°C</tspan>
+                <tspan x="491" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">WEATHER_HOUR_DATETIME_6</tspan>
+                <tspan x="491" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_TEMP_6</tspan>
                 <tspan x="491" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">gefühlt</tspan>
-                <tspan x="491" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">11°C</tspan>
+                <tspan x="491" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_FEEL_6</tspan>
                 <tspan x="491" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Regen</tspan>
-                <tspan x="491" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">20%</tspan>
+                <tspan x="491" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_POP_6</tspan>
                 <tspan x="491" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Wolken</tspan>
-                <tspan x="491" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">25%</tspan>
+                <tspan x="491" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_CLOUDS_6</tspan>
             </text>
         </g>
         <g id="g107">
             <rect id="bg_h7" x="538" y="88" width="50" height="195" style="fill:#ffffff" />
             <text x="541" y="92" id="hour_7">
-                <tspan x="541" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">06</tspan>
-                <tspan x="541" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">10°C</tspan>
+                <tspan x="541" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_7</tspan>
+                <tspan x="541" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_7</tspan>
                 <tspan x="541" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">gefühlt</tspan>
-                <tspan x="541" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">11°C</tspan>
+                <tspan x="541" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_FEEL_7</tspan>
                 <tspan x="541" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Regen</tspan>
-                <tspan x="541" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">20%</tspan>
+                <tspan x="541" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_7</tspan>
                 <tspan x="541" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Wolken</tspan>
-                <tspan x="541" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">25%</tspan>
+                <tspan x="541" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_CLOUDS_7</tspan>
             </text>
         </g>
         <g id="g108">
             <rect id="bg_h8" x="588" y="88" width="50" height="195" />
             <text x="591" y="92" id="hour_8">
-                <tspan x="591" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">07</tspan>
-                <tspan x="591" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">10°C</tspan>
+                <tspan x="591" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">WEATHER_HOUR_DATETIME_8</tspan>
+                <tspan x="591" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_TEMP_8</tspan>
                 <tspan x="591" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">gefühlt</tspan>
-                <tspan x="591" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">11°C</tspan>
+                <tspan x="591" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_FEEL_8</tspan>
                 <tspan x="591" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Regen</tspan>
-                <tspan x="591" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">20%</tspan>
+                <tspan x="591" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_POP_8</tspan>
                 <tspan x="591" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Wolken</tspan>
-                <tspan x="591" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">25%</tspan>
+                <tspan x="591" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_CLOUDS_8</tspan>
             </text>
         </g>
         <g id="g109">
             <rect id="bg_h9" x="638" y="88" width="50" height="195" style="fill:#ffffff" />
             <text x="641" y="92" id="hour_9">
-                <tspan x="641" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">08</tspan>
-                <tspan x="641" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">10°C</tspan>
+                <tspan x="641" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_9</tspan>
+                <tspan x="641" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_9</tspan>
                 <tspan x="641" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">gefühlt</tspan>
-                <tspan x="641" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">11°C</tspan>
+                <tspan x="641" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_FEEL_9</tspan>
                 <tspan x="641" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Regen</tspan>
-                <tspan x="641" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">20%</tspan>
+                <tspan x="641" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_9</tspan>
                 <tspan x="641" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Wolken</tspan>
-                <tspan x="641" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">25%</tspan>
+                <tspan x="641" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_CLOUDS_9</tspan>
             </text>
         </g>
         <g id="g110">
             <rect id="bg_h10" x="688" y="88" width="50" height="195" />
             <text x="691" y="92" id="hour_10">
-                <tspan x="691" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">09</tspan>
-                <tspan x="691" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">10°C</tspan>
+                <tspan x="691" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">WEATHER_HOUR_DATETIME_10</tspan>
+                <tspan x="691" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_TEMP_10</tspan>
                 <tspan x="691" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">gefühlt</tspan>
-                <tspan x="691" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">11°C</tspan>
+                <tspan x="691" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_FEEL_10</tspan>
                 <tspan x="691" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Regen</tspan>
-                <tspan x="691" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">20%</tspan>
+                <tspan x="691" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_POP_10</tspan>
                 <tspan x="691" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Wolken</tspan>
-                <tspan x="691" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">25%</tspan>
+                <tspan x="691" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_CLOUDS_10</tspan>
             </text>
         </g>
         <g id="g111">
             <rect id="bg_h11" x="738" y="88" width="50" height="195" style="fill:#ffffff" />
             <text x="741" y="92" id="hour_1">
-                <tspan x="741" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">10</tspan>
-                <tspan x="741" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">10°C</tspan>
+                <tspan x="741" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_11</tspan>
+                <tspan x="741" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_11</tspan>
                 <tspan x="741" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">gefühlt</tspan>
-                <tspan x="741" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">11°C</tspan>
+                <tspan x="741" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_FEEL_11</tspan>
                 <tspan x="741" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Regen</tspan>
-                <tspan x="741" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">20%</tspan>
+                <tspan x="741" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_11</tspan>
                 <tspan x="741" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Wolken</tspan>
-                <tspan x="741" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">25%</tspan>
+                <tspan x="741" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_CLOUDS_11</tspan>
             </text>
         </g>
     </g>
@@ -187,11 +189,11 @@
               height="180"
               style="fill:#ffffff;stroke:#000000;stroke-width:1px"/>
         <text x="20" y="295" id="daily_1">
-            <tspan x="20" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">30. April</tspan>
+            <tspan x="20" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_DAY_DATETIME_1</tspan>
             <tspan x="20" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">min/max</tspan>
-            <tspan x="20" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">11°C/20°C</tspan>
+            <tspan x="20" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_DAY_TEMP_MIN_1/W_DAY_TEMP_MAX_1</tspan>
             <tspan x="20" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Regen/Wolken</tspan>
-            <tspan x="20" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">25%/45%</tspan>
+            <tspan x="20" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_DAY_POP_1/W_DAY_CLOUDS_1</tspan>
             <tspan x="20" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Wind</tspan>
             <tspan x="20" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">15 m/s</tspan>
         </text>
@@ -202,11 +204,11 @@
               height="180"
               style="fill:#000000;stroke:#000000;stroke-width:1px"/>
         <text x="130" y="295" id="daily_2">
-            <tspan x="130" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">01. Mai</tspan>
+            <tspan x="130" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">WEATHER_DAY_DATETIME_2</tspan>
             <tspan x="130" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">min/max</tspan>
-            <tspan x="130" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">11°C/20°C</tspan>
+            <tspan x="130" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_DAY_TEMP_MIN_2/W_DAY_TEMP_MAX_2</tspan>
             <tspan x="130" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Regen/Wolken</tspan>
-            <tspan x="130" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">25%/45%</tspan>
+            <tspan x="130" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_DAY_POP_2/W_DAY_CLOUDS_2</tspan>
             <tspan x="130" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Wind</tspan>
             <tspan x="130" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">15 m/s</tspan>
         </text>
@@ -217,11 +219,11 @@
               height="180"
               style="fill:#ffffff;stroke:#000000;stroke-width:1px"/>
         <text x="2400" y="295" id="daily_3">
-            <tspan x="240" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">02. Mai</tspan>
+            <tspan x="240" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_DAY_DATETIME_3</tspan>
             <tspan x="240" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">min/max</tspan>
-            <tspan x="240" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">11°C/20°C</tspan>
+            <tspan x="240" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_DAY_TEMP_MIN_3/W_DAY_TEMP_MAX_3</tspan>
             <tspan x="240" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Regen/Wolken</tspan>
-            <tspan x="240" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">25%/45%</tspan>
+            <tspan x="240" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_DAY_POP_3/W_DAY_CLOUDS_3</tspan>
             <tspan x="240" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Wind</tspan>
             <tspan x="240" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">15 m/s</tspan>
         </text>
@@ -232,11 +234,11 @@
               height="180"
               style="fill:#000000;stroke:#000000;stroke-width:1px"/>
         <text x="350" y="295" id="daily_4">
-            <tspan x="350" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">03. Mai</tspan>
+            <tspan x="350" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">WEATHER_DAY_DATETIME_4</tspan>
             <tspan x="350" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">min/max</tspan>
-            <tspan x="350" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">11°C/20°C</tspan>
+            <tspan x="350" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_DAY_TEMP_MIN_4/W_DAY_TEMP_MAX_4</tspan>
             <tspan x="350" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Regen/Wolken</tspan>
-            <tspan x="350" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">25%/45%</tspan>
+            <tspan x="350" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_DAY_POP_4/W_DAY_CLOUDS_4</tspan>
             <tspan x="350" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Wind</tspan>
             <tspan x="350" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">15 m/s</tspan>
         </text>
@@ -247,11 +249,11 @@
               height="180"
               style="fill:#ffffff;stroke:#000000;stroke-width:1px"/>
         <text x="460" y="295" id="daily_5">
-            <tspan x="460" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">04. Mai</tspan>
+            <tspan x="460" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_DAY_DATETIME_5</tspan>
             <tspan x="460" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">min/max</tspan>
-            <tspan x="460" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">11°C/20°C</tspan>
+            <tspan x="460" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_DAY_TEMP_MIN_5/W_DAY_TEMP_MAX_5</tspan>
             <tspan x="460" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Regen/Wolken</tspan>
-            <tspan x="460" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">25%/45%</tspan>
+            <tspan x="460" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_DAY_POP_5/W_DAY_CLOUDS_5</tspan>
             <tspan x="460" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Wind</tspan>
             <tspan x="460" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">15 m/s</tspan>
         </text>
@@ -262,11 +264,11 @@
               height="180"
               style="fill:#000000;stroke:#000000;stroke-width:1px"/>
         <text x="570" y="295" id="daily_6">
-            <tspan x="570" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">05. Mai</tspan>
+            <tspan x="570" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">WEATHER_DAY_DATETIME_6</tspan>
             <tspan x="570" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">min/max</tspan>
-            <tspan x="570" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">11°C/20°C</tspan>
+            <tspan x="570" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_DAY_TEMP_MIN_6/W_DAY_TEMP_MAX_6</tspan>
             <tspan x="570" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Regen/Wolken</tspan>
-            <tspan x="570" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">25%/45%</tspan>
+            <tspan x="570" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_DAY_POP_6/W_DAY_CLOUDS_6</tspan>
             <tspan x="570" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Wind</tspan>
             <tspan x="570" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">15 m/s</tspan>
         </text>
@@ -277,11 +279,11 @@
               height="180"
               style="fill:#ffffff;stroke:#000000;stroke-width:1px"/>
         <text x="680" y="295" id="daily_7">
-            <tspan x="680" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">06. Mai</tspan>
+            <tspan x="680" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_DAY_DATETIME_7</tspan>
             <tspan x="680" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">min/max</tspan>
-            <tspan x="680" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">11°C/20°C</tspan>
+            <tspan x="680" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_DAY_TEMP_MIN_7/W_DAY_TEMP_MAX_7</tspan>
             <tspan x="680" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Regen/Wolken</tspan>
-            <tspan x="680" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">25%/45%</tspan>
+            <tspan x="680" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_DAY_POP_7/W_DAY_CLOUDS_7</tspan>
             <tspan x="680" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Wind</tspan>
             <tspan x="680" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">15 m/s</tspan>
         </text>
