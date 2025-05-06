@@ -11,7 +11,7 @@ class OpenWeatherMap(BaseWeatherProvider):
 
     # Build the URL for the API call
     def get_url(self):
-        url = ("https://api.openweathermap.org/data/3.0/onecall?lat={}&lon={}&exclude=minutely&units={}&appid={}"
+        url = ("https://api.openweathermap.org/data/3.0/onecall?lat={}&lon={}&exclude=minutely&units={}&appid={}&lang=de"
                .format(self.location_lat, self.location_long, self.units, self.openweathermap_apikey))
 
         return url
