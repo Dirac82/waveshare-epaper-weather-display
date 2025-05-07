@@ -106,6 +106,7 @@ def main():
         'W_HOUR_CLOUDS_2': "{}%".format(str(round(weather["hourly"][2]["clouds"]))),
         'W_HOUR_POP_2': "{}%".format(str(round(weather["hourly"][2]["pop"]*100))),
         'W_HOUR_WIND_SPEED_2': "{}m/s".format(str(round(weather["hourly"][2]["wind_speed"]))),
+        'W_HOUR_ICON_2':weather["hourly"][2]["icon"],
         'WEATHER_HOUR_DESC_2': weather["hourly"][2]["description"],
 
         'WEATHER_HOUR_DATETIME_3': datetime.datetime.fromtimestamp(weather["hourly"][3]["dt"]).strftime("%H"),
@@ -114,6 +115,7 @@ def main():
         'W_HOUR_CLOUDS_3': "{}%".format(str(round(weather["hourly"][3]["clouds"]))),
         'W_HOUR_POP_3': "{}%".format(str(round(weather["hourly"][3]["pop"]*100))),
         'W_HOUR_WIND_SPEED_3': "{}m/s".format(str(round(weather["hourly"][3]["wind_speed"]))),
+        'W_HOUR_ICON_3':weather["hourly"][3]["icon"],
         'WEATHER_HOUR_DESC_3': weather["hourly"][3]["description"],
 
         'WEATHER_HOUR_DATETIME_4': datetime.datetime.fromtimestamp(weather["hourly"][4]["dt"]).strftime("%H"),
@@ -122,6 +124,7 @@ def main():
         'W_HOUR_CLOUDS_4': "{}%".format(str(round(weather["hourly"][4]["clouds"]))),
         'W_HOUR_POP_4': "{}%".format(str(round(weather["hourly"][4]["pop"]*100))),
         'W_HOUR_WIND_SPEED_4': "{}m/s".format(str(round(weather["hourly"][4]["wind_speed"]))),
+        'W_HOUR_ICON_4':weather["hourly"][4]["icon"],
         'WEATHER_HOUR_DESC_4': weather["hourly"][4]["description"],
 
         'WEATHER_HOUR_DATETIME_5': datetime.datetime.fromtimestamp(weather["hourly"][5]["dt"]).strftime("%H"),
@@ -130,6 +133,7 @@ def main():
         'W_HOUR_CLOUDS_5': "{}%".format(str(round(weather["hourly"][5]["clouds"]))),
         'W_HOUR_POP_5': "{}%".format(str(round(weather["hourly"][5]["pop"]*100))),
         'W_HOUR_WIND_SPEED_5': "{}m/s".format(str(round(weather["hourly"][5]["wind_speed"]))),
+        'W_HOUR_ICON_5':weather["hourly"][5]["icon"],
         'WEATHER_HOUR_DESC_5': weather["hourly"][5]["description"],
 
         'WEATHER_HOUR_DATETIME_6': datetime.datetime.fromtimestamp(weather["hourly"][6]["dt"]).strftime("%H"),
@@ -138,6 +142,7 @@ def main():
         'W_HOUR_CLOUDS_6': "{}%".format(str(round(weather["hourly"][6]["clouds"]))),
         'W_HOUR_POP_6': "{}%".format(str(round(weather["hourly"][6]["pop"]*100))),
         'W_HOUR_WIND_SPEED_6': "{}m/s".format(str(round(weather["hourly"][6]["wind_speed"]))),
+        'W_HOUR_ICON_6':weather["hourly"][6]["icon"],
         'WEATHER_HOUR_DESC_6': weather["hourly"][6]["description"],
 
         'WEATHER_HOUR_DATETIME_7': datetime.datetime.fromtimestamp(weather["hourly"][7]["dt"]).strftime("%H"),
@@ -146,6 +151,7 @@ def main():
         'W_HOUR_CLOUDS_7': "{}%".format(str(round(weather["hourly"][7]["clouds"]))),
         'W_HOUR_POP_7': "{}%".format(str(round(weather["hourly"][7]["pop"]*100))),
         'W_HOUR_WIND_SPEED_7': "{}m/s".format(str(round(weather["hourly"][7]["wind_speed"]))),
+        'W_HOUR_ICON_7':weather["hourly"][7]["icon"],
         'WEATHER_HOUR_DESC_7': weather["hourly"][7]["description"],
 
         'WEATHER_HOUR_DATETIME_8': datetime.datetime.fromtimestamp(weather["hourly"][8]["dt"]).strftime("%H"),
@@ -154,6 +160,7 @@ def main():
         'W_HOUR_CLOUDS_8': "{}%".format(str(round(weather["hourly"][8]["clouds"]))),
         'W_HOUR_POP_8': "{}%".format(str(round(weather["hourly"][8]["pop"]*100))),
         'W_HOUR_WIND_SPEED_8': "{}m/s".format(str(round(weather["hourly"][8]["wind_speed"]))),
+        'W_HOUR_ICON_8':weather["hourly"][8]["icon"],
         'WEATHER_HOUR_DESC_8': weather["hourly"][8]["description"],
 
         'WEATHER_HOUR_DATETIME_9': datetime.datetime.fromtimestamp(weather["hourly"][9]["dt"]).strftime("%H"),
@@ -162,6 +169,7 @@ def main():
         'W_HOUR_CLOUDS_9': "{}%".format(str(round(weather["hourly"][9]["clouds"]))),
         'W_HOUR_POP_9': "{}%".format(str(round(weather["hourly"][9]["pop"]*100))),
         'W_HOUR_WIND_SPEED_9': "{}m/s".format(str(round(weather["hourly"][9]["wind_speed"]))),
+        'W_HOUR_ICON_9':weather["hourly"][9]["icon"],
         'WEATHER_HOUR_DESC_9': weather["hourly"][9]["description"],
 
         'WEATHER_HOUR_DATETIME_A': datetime.datetime.fromtimestamp(weather["hourly"][10]["dt"]).strftime("%H"),
@@ -170,6 +178,7 @@ def main():
         'W_HOUR_CLOUDS_A': "{}%".format(str(round(weather["hourly"][10]["clouds"]))),
         'W_HOUR_POP_A': "{}%".format(str(round(weather["hourly"][10]["pop"]*100))),
         'W_HOUR_WIND_SPEED_A': "{}m/s".format(str(round(weather["hourly"][10]["wind_speed"]))),
+        'W_HOUR_ICON_A':weather["hourly"][10]["icon"],
         'WEATHER_HOUR_DESC_A': weather["hourly"][10]["description"],
 
         'WEATHER_HOUR_DATETIME_B': datetime.datetime.fromtimestamp(weather["hourly"][11]["dt"]).strftime("%H"),
@@ -178,7 +187,17 @@ def main():
         'W_HOUR_CLOUDS_B': "{}%".format(str(round(weather["hourly"][11]["clouds"]))),
         'W_HOUR_POP_B': "{}%".format(str(round(weather["hourly"][11]["pop"]*100))),
         'W_HOUR_WIND_SPEED_B': "{}m/s".format(str(round(weather["hourly"][11]["wind_speed"]))),
+        'W_HOUR_ICON_B':weather["hourly"][11]["icon"],
         'WEATHER_HOUR_DESC_B': weather["hourly"][11]["description"],
+
+        'WEATHER_HOUR_DATETIME_C': datetime.datetime.fromtimestamp(weather["hourly"][12]["dt"]).strftime("%H"),
+        'W_HOUR_TEMP_C': "{}{}".format(str(round(weather["hourly"][12]["temperature"])), degrees),
+        'W_HOUR_FEEL_C': "{}{}".format(str(round(weather["hourly"][12]["feels_like"])), degrees),
+        'W_HOUR_CLOUDS_C': "{}%".format(str(round(weather["hourly"][12]["clouds"]))),
+        'W_HOUR_POP_C': "{}%".format(str(round(weather["hourly"][12]["pop"]*100))),
+        'W_HOUR_WIND_SPEED_C': "{}m/s".format(str(round(weather["hourly"][12]["wind_speed"]))),
+        'W_HOUR_ICON_C':weather["hourly"][12]["icon"],
+        'WEATHER_HOUR_DESC_C': weather["hourly"][12]["description"],
 
         'WEATHER_DAY_DATETIME_1': datetime.datetime.fromtimestamp(weather["daily"][1]["dt"]).strftime("%a %d"),
         'W_DAY_TEMP_MIN_1': "{}{}".format(str(round(weather["daily"][1]["temperatureMin"])), degrees),

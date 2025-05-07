@@ -42,146 +42,77 @@
         <g id="g_h1" transform="translate(241 92)">
             <rect id="bg_h1" x="-3" y="-4" width="100" height="195" style="fill:#ffffff;stroke:#000000;stroke-width:1px" />
             <text x="8" y="4" id="hour_1">
-                <tspan x="8" dy="15" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_1</tspan>
-                <tspan x="8" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_1</tspan>
-                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_1</tspan>
-                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_WIND_SPEED_1</tspan>
+                <tspan x="8" dy="15" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_2</tspan>
+                <tspan x="8" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_2</tspan>
+                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_2</tspan>
+                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_WIND_SPEED_2</tspan>
             </text>
             <g transform="scale(0.6) translate(12 180)">
-                <use id="houricon1" href="icons/W_HOUR_ICON_1.svg" />
+                <use id="houricon1" href="icons/W_HOUR_ICON_2.svg" />
             </g>
         </g>
-        <!--g id="g103">
-            <rect id="bg_h2" x="288" y="88" width="50" height="195" />
-            <text x="291" y="92" id="hour_2">
-                <tspan x="291" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">WEATHER_HOUR_DATETIME_2</tspan>
-                <tspan x="291" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_TEMP_2</tspan>
-                <tspan x="291" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">gefühlt</tspan>
-                <tspan x="291" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_FEEL_2</tspan>
-                <tspan x="291" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Regen</tspan>
-                <tspan x="291" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_POP_2</tspan>
-                <tspan x="291" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Wolken</tspan>
-                <tspan x="291" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_CLOUDS_2</tspan>
+        <g id="g_h2" transform="translate(341 92)">
+            <rect id="bg_h2" x="-3" y="-4" width="100" height="195" style="fill:#ffffff;stroke:#000000;stroke-width:1px" />
+            <text x="8" y="4" id="hour_2">
+                <tspan x="8" dy="15" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_4</tspan>
+                <tspan x="8" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_4</tspan>
+                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_4</tspan>
+                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_WIND_SPEED_4</tspan>
             </text>
-        </g-->
-        <g id="g104">
-            <rect id="bg_h3" x="338" y="88" width="50" height="195" style="fill:#ffffff" />
-            <text x="341" y="92" id="hour_3">
-                <tspan x="341" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_3</tspan>
-                <tspan x="341" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_3</tspan>
-                <tspan x="341" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">gefühlt</tspan>
-                <tspan x="341" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_FEEL_3</tspan>
-                <tspan x="341" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Regen</tspan>
-                <tspan x="341" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_3</tspan>
-                <tspan x="341" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Wolken</tspan>
-                <tspan x="341" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_CLOUDS_3</tspan>
-            </text>
+            <g transform="scale(0.6) translate(12 180)">
+                <use id="houricon1" href="icons/W_HOUR_ICON_4.svg" />
+            </g>
         </g>
-        <g id="g105">
-            <rect id="bg_h4" x="388" y="88" width="50" height="195" />
-            <text x="391" y="92" id="hour_4">
-                <tspan x="391" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">WEATHER_HOUR_DATETIME_4</tspan>
-                <tspan x="391" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_TEMP_4</tspan>
-                <tspan x="391" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">gefühlt</tspan>
-                <tspan x="391" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_FEEL_4</tspan>
-                <tspan x="391" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Regen</tspan>
-                <tspan x="391" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_POP_4</tspan>
-                <tspan x="391" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Wolken</tspan>
-                <tspan x="391" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_CLOUDS_4</tspan>
+        <g id="g_h3" transform="translate(441 92)">
+            <rect id="bg_h3" x="-3" y="-4" width="100" height="195" style="fill:#ffffff;stroke:#000000;stroke-width:1px" />
+            <text x="8" y="4" id="hour_3">
+                <tspan x="8" dy="15" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_6</tspan>
+                <tspan x="8" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_6</tspan>
+                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_6</tspan>
+                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_WIND_SPEED_6</tspan>
             </text>
+            <g transform="scale(0.6) translate(12 180)">
+                <use id="houricon1" href="icons/W_HOUR_ICON_6.svg" />
+            </g>
         </g>
-        <g id="g106">
-            <rect id="bg_h5" x="438" y="88" width="50" height="195" style="fill:#ffffff" />
-            <text x="441" y="92" id="hour_5">
-                <tspan x="441" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_5</tspan>
-                <tspan x="441" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_5</tspan>
-                <tspan x="441" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">gefühlt</tspan>
-                <tspan x="441" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_FEEL_5</tspan>
-                <tspan x="441" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Regen</tspan>
-                <tspan x="441" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_5</tspan>
-                <tspan x="441" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Wolken</tspan>
-                <tspan x="441" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_CLOUDS_5</tspan>
+        <g id="g_h4" transform="translate(541 92)">
+            <rect id="bg_h4" x="-3" y="-4" width="100" height="195" style="fill:#ffffff;stroke:#000000;stroke-width:1px" />
+            <text x="8" y="4" id="hour_4">
+                <tspan x="8" dy="15" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_8</tspan>
+                <tspan x="8" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_8</tspan>
+                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_8</tspan>
+                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_WIND_SPEED_8</tspan>
             </text>
+            <g transform="scale(0.6) translate(12 180)">
+                <use id="houricon1" href="icons/W_HOUR_ICON_8.svg" />
+            </g>
         </g>
-        <g id="g106">
-            <rect id="bg_h6" x="488" y="88" width="50" height="195" />
-            <text x="491" y="92" id="hour_6">
-                <tspan x="491" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">WEATHER_HOUR_DATETIME_6</tspan>
-                <tspan x="491" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_TEMP_6</tspan>
-                <tspan x="491" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">gefühlt</tspan>
-                <tspan x="491" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_FEEL_6</tspan>
-                <tspan x="491" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Regen</tspan>
-                <tspan x="491" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_POP_6</tspan>
-                <tspan x="491" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Wolken</tspan>
-                <tspan x="491" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_CLOUDS_6</tspan>
+        <g id="g_h5" transform="translate(641 92)">
+            <rect id="bg_h5" x="-3" y="-4" width="100" height="195" style="fill:#ffffff;stroke:#000000;stroke-width:1px" />
+            <text x="8" y="4" id="hour_1">
+                <tspan x="8" dy="15" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_A</tspan>
+                <tspan x="8" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_A</tspan>
+                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_A</tspan>
+                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_WIND_SPEED_A</tspan>
             </text>
+            <g transform="scale(0.6) translate(12 180)">
+                <use id="houricon1" href="icons/W_HOUR_ICON_A.svg" />
+            </g>
         </g>
-        <g id="g107">
-            <rect id="bg_h7" x="538" y="88" width="50" height="195" style="fill:#ffffff" />
-            <text x="541" y="92" id="hour_7">
-                <tspan x="541" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_7</tspan>
-                <tspan x="541" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_7</tspan>
-                <tspan x="541" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">gefühlt</tspan>
-                <tspan x="541" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_FEEL_7</tspan>
-                <tspan x="541" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Regen</tspan>
-                <tspan x="541" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_7</tspan>
-                <tspan x="541" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Wolken</tspan>
-                <tspan x="541" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_CLOUDS_7</tspan>
+        <g id="g_h6" transform="translate(741 92)">
+            <rect id="bg_h6" x="-3" y="-4" width="100" height="195" style="fill:#ffffff;stroke:#000000;stroke-width:1px" />
+            <text x="8" y="4" id="hour_1">
+                <tspan x="8" dy="15" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_C</tspan>
+                <tspan x="8" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_C</tspan>
+                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_C</tspan>
+                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_WIND_SPEED_C</tspan>
             </text>
-        </g>
-        <g id="g108">
-            <rect id="bg_h8" x="588" y="88" width="50" height="195" />
-            <text x="591" y="92" id="hour_8">
-                <tspan x="591" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">WEATHER_HOUR_DATETIME_8</tspan>
-                <tspan x="591" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_TEMP_8</tspan>
-                <tspan x="591" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">gefühlt</tspan>
-                <tspan x="591" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_FEEL_8</tspan>
-                <tspan x="591" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Regen</tspan>
-                <tspan x="591" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_POP_8</tspan>
-                <tspan x="591" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Wolken</tspan>
-                <tspan x="591" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_CLOUDS_8</tspan>
-            </text>
-        </g>
-        <g id="g109">
-            <rect id="bg_h9" x="638" y="88" width="50" height="195" style="fill:#ffffff" />
-            <text x="641" y="92" id="hour_9">
-                <tspan x="641" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_9</tspan>
-                <tspan x="641" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_9</tspan>
-                <tspan x="641" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">gefühlt</tspan>
-                <tspan x="641" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_FEEL_9</tspan>
-                <tspan x="641" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Regen</tspan>
-                <tspan x="641" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_9</tspan>
-                <tspan x="641" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Wolken</tspan>
-                <tspan x="641" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_CLOUDS_9</tspan>
-            </text>
-        </g>
-        <g id="g110">
-            <rect id="bg_h10" x="688" y="88" width="50" height="195" />
-            <text x="691" y="92" id="hour_10">
-                <tspan x="691" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">WEATHER_HOUR_DATETIME_A</tspan>
-                <tspan x="691" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_TEMP_A</tspan>
-                <tspan x="691" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">gefühlt</tspan>
-                <tspan x="691" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_FEEL_A</tspan>
-                <tspan x="691" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Regen</tspan>
-                <tspan x="691" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_POP_A</tspan>
-                <tspan x="691" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Wolken</tspan>
-                <tspan x="691" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_HOUR_CLOUDS_A</tspan>
-            </text>
-        </g>
-        <g id="g111">
-            <rect id="bg_h11" x="738" y="88" width="50" height="195" style="fill:#ffffff" />
-            <text x="741" y="92" id="hour_1">
-                <tspan x="741" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_B</tspan>
-                <tspan x="741" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_B</tspan>
-                <tspan x="741" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">gefühlt</tspan>
-                <tspan x="741" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_FEEL_B</tspan>
-                <tspan x="741" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Regen</tspan>
-                <tspan x="741" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_B</tspan>
-                <tspan x="741" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Wolken</tspan>
-                <tspan x="741" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_CLOUDS_B</tspan>
-            </text>
+            <g transform="scale(0.6) translate(12 180)">
+                <use id="houricon1" href="icons/W_HOUR_ICON_C.svg" />
+            </g>
         </g>
     </g>
+
     <g id="Daily-Forecast">
         <rect id="Tag-1"
               x="15"
