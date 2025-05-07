@@ -47,7 +47,7 @@
                 <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_2</tspan>
                 <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_WIND_SPEED_2</tspan>
             </text>
-            <g transform="scale(0.6) translate(12 200)">
+            <g transform="translate(8 100) scale(0.6)">
                 <use id="houricon1" href="icons/W_HOUR_ICON_2.svg" />
             </g>
         </g>
