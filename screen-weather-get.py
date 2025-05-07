@@ -7,7 +7,6 @@ import logging
 from weather_providers import openweathermap
 from utility import get_formatted_time, update_svg, configure_logging, configure_locale
 import textwrap
-import html
 
 configure_locale()
 configure_logging()
@@ -98,6 +97,7 @@ def main():
         'W_HOUR_CLOUDS_1': "{}%".format(str(round(weather["hourly"][1]["clouds"]))),
         'W_HOUR_POP_1': "{}%".format(str(round(weather["hourly"][1]["pop"]*100))),
         'W_HOUR_WIND_SPEED_1': "{}m/s".format(str(round(weather["hourly"][1]["wind_speed"]))),
+        'W_HOUR_ICON_1':weather["hourly"][1]["icon"],
         'WEATHER_HOUR_DESC_1': weather["hourly"][1]["description"],
 
         'WEATHER_HOUR_DATETIME_2': datetime.datetime.fromtimestamp(weather["hourly"][2]["dt"]).strftime("%H"),
@@ -237,14 +237,13 @@ def main():
         'WEATHER_DAY_DESC_7': weather["daily"][7]["description"]
     }
 
-    logging.info(output_dict)
+    logging.debug(output_dict)
 
     logging.info("Updating SVG")
 
     template_svg_filename = f'screen-template.{template_name}.svg'
     output_svg_filename = 'screen-output-weather.svg'
     update_svg(template_svg_filename, output_svg_filename, output_dict)
-
 
 if __name__ == "__main__":
     main()
