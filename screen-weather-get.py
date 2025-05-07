@@ -205,6 +205,7 @@ def main():
         'W_DAY_CLOUDS_1': "{}%".format(str(round(weather["daily"][1]["clouds"]))),
         'W_DAY_POP_1': "{}%".format(str(round(weather["daily"][1]["pop"]*100))),
         'W_DAY_WIND_SPEED_1': "{}m/s".format(str(round(weather["daily"][1]["wind_speed"]))),
+        'W_DAY_ICON_1':weather["daily"][1]["icon"],
         'WEATHER_DAY_DESC_1': weather["daily"][1]["description"],
 
         'WEATHER_DAY_DATETIME_2': datetime.datetime.fromtimestamp(weather["daily"][2]["dt"]).strftime("%a %d"),
@@ -213,6 +214,7 @@ def main():
         'W_DAY_CLOUDS_2': "{}%".format(str(round(weather["daily"][2]["clouds"]))),
         'W_DAY_POP_2': "{}%".format(str(round(weather["daily"][2]["pop"]*100))),
         'W_DAY_WIND_SPEED_2': "{}m/s".format(str(round(weather["daily"][2]["wind_speed"]))),
+        'W_DAY_ICON_2':weather["daily"][2]["icon"],
         'WEATHER_DAY_DESC_2': weather["daily"][2]["description"],
 
         'WEATHER_DAY_DATETIME_3': datetime.datetime.fromtimestamp(weather["daily"][3]["dt"]).strftime("%a %d"),
@@ -221,6 +223,7 @@ def main():
         'W_DAY_CLOUDS_3': "{}%".format(str(round(weather["daily"][3]["clouds"]))),
         'W_DAY_POP_3': "{}%".format(str(round(weather["daily"][3]["pop"]*100))),
         'W_DAY_WIND_SPEED_3': "{}m/s".format(str(round(weather["daily"][3]["wind_speed"]))),
+        'W_DAY_ICON_3':weather["daily"][3]["icon"],
         'WEATHER_DAY_DESC_3': weather["daily"][3]["description"],
 
         'WEATHER_DAY_DATETIME_4': datetime.datetime.fromtimestamp(weather["daily"][4]["dt"]).strftime("%a %d"),
@@ -229,6 +232,7 @@ def main():
         'W_DAY_CLOUDS_4': "{}%".format(str(round(weather["daily"][4]["clouds"]))),
         'W_DAY_POP_4': "{}%".format(str(round(weather["daily"][4]["pop"]*100))),
         'W_DAY_WIND_SPEED_4': "{}m/s".format(str(round(weather["daily"][4]["wind_speed"]))),
+        'W_DAY_ICON_4':weather["daily"][4]["icon"],
         'WEATHER_DAY_DESC_4': weather["daily"][4]["description"],
 
         'WEATHER_DAY_DATETIME_5': datetime.datetime.fromtimestamp(weather["daily"][5]["dt"]).strftime("%a %d"),
@@ -237,6 +241,7 @@ def main():
         'W_DAY_CLOUDS_5': "{}%".format(str(round(weather["daily"][5]["clouds"]))),
         'W_DAY_POP_5': "{}%".format(str(round(weather["daily"][5]["pop"]*100))),
         'W_DAY_WIND_SPEED_5': "{}m/s".format(str(round(weather["daily"][5]["wind_speed"]))),
+        'W_DAY_ICON_5':weather["daily"][5]["icon"],
         'WEATHER_DAY_DESC_5': weather["daily"][5]["description"],
 
         'WEATHER_DAY_DATETIME_6': datetime.datetime.fromtimestamp(weather["daily"][6]["dt"]).strftime("%a %d"),
@@ -245,6 +250,7 @@ def main():
         'W_DAY_CLOUDS_6': "{}%".format(str(round(weather["daily"][6]["clouds"]))),
         'W_DAY_POP_6': "{}%".format(str(round(weather["daily"][6]["pop"]*100))),
         'W_DAY_WIND_SPEED_6': "{}m/s".format(str(round(weather["daily"][6]["wind_speed"]))),
+        'W_DAY_ICON_6':weather["daily"][6]["icon"],
         'WEATHER_DAY_DESC_6': weather["daily"][6]["description"],
 
         'WEATHER_DAY_DATETIME_7': datetime.datetime.fromtimestamp(weather["daily"][7]["dt"]).strftime("%a %d"),
@@ -253,6 +259,7 @@ def main():
         'W_DAY_CLOUDS_7': "{}%".format(str(round(weather["daily"][7]["clouds"]))),
         'W_DAY_POP_7': "{}%".format(str(round(weather["daily"][7]["pop"]*100))),
         'W_DAY_WIND_SPEED_7': "{}m/s".format(str(round(weather["daily"][7]["wind_speed"]))),
+        'W_DAY_ICON_7':weather["daily"][7]["icon"],
         'WEATHER_DAY_DESC_7': weather["daily"][7]["description"]
     }
 

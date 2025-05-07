@@ -122,6 +122,9 @@
             <tspan x="5" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_DAY_POP_1/W_DAY_CLOUDS_1</tspan>
             <tspan x="5" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_DAY_WIND_SPEED_1</tspan>
         </text>
+            <g transform="translate(10 100) scale(0.6)">
+                <use id="dayicon1" href="icons/W_DAY_ICON_1.svg" />
+            </g>
         </g>
         <rect id="Tag-2"
               x="125"
@@ -144,7 +147,7 @@
               width="110"
               height="180"
               style="fill:#ffffff;stroke:#000000;stroke-width:1px"/>
-        <text x="2400" y="295" id="daily_3">
+        <text x="240" y="295" id="daily_3">
             <tspan x="240" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_DAY_DATETIME_3</tspan>
             <tspan x="240" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">min/max</tspan>
             <tspan x="240" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_DAY_TEMP_MIN_3/W_DAY_TEMP_MAX_3</tspan>
