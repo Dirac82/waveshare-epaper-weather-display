@@ -39,16 +39,16 @@
     </g>
 
     <g id="Hourly-Forecast">
-        <g id="g102">
-            <rect id="bg_h1" x="238" y="88" width="100" height="195" style="fill:#ffffff" />
-            <text x="241" y="92" id="hour_1">
-                <tspan x="241" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_1</tspan>
-                <tspan x="241" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_1</tspan>
-                <tspan x="241" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_FEEL_1</tspan>
-                <tspan x="241" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_1</tspan>
-                <tspan x="241" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_CLOUDS_1</tspan>
+        <g id="g102" transform="translate(241 92)">
+            <rect id="bg_h1" x="-3" y="-4" width="100" height="195" style="fill:#ffffff" />
+            <text x="0" y="92" id="hour_1">
+                <tspan x="0" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_1</tspan>
+                <tspan x="0" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_1</tspan>
+                <tspan x="0" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_FEEL_1</tspan>
+                <tspan x="0" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_1</tspan>
+                <tspan x="0" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_CLOUDS_1</tspan>
             </text>
-            <g transform="scale(0.4) translate(241 190)">
+            <g transform="scale(0.4) translate(0 100)">
                 <use id="houricon1" href="icons/W_HOUR_ICON_1.svg" />
             </g>
         </g>
