@@ -47,7 +47,7 @@
                 <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_2</tspan>
                 <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_WIND_SPEED_2</tspan>
             </text>
-            <g transform="translate(8 100) scale(0.6)">
+            <g transform="translate(12 120) scale(0.6)">
                 <use id="houricon1" href="icons/W_HOUR_ICON_2.svg" />
             </g>
         </g>
@@ -115,14 +115,15 @@
 
     <g id="Daily-Forecast">
         <g transform="translate(15 290)">
-        <rect id="Tag-1" x="0" y="0" width="110" height="180" style="fill:#ffffff;stroke:#000000;stroke-width:1px"/>
-        <text x="5" y="5" id="daily_1" style="font-style:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">
-            <tspan x="5" dy="15" style="font-style:normal;font-weight:normal;font-size:20px;font-family:Roboto;">WEATHER_DAY_DATETIME_1</tspan>
-            <tspan x="5" dy="24" >W_DAY_TEMP_MIN_1/</tspan><tspan dx="0" dy="0" style="fill:#ff0000">W_DAY_TEMP_MAX_1</tspan>
-            <tspan x="5" dy="24" >W_DAY_POP_1/W_DAY_CLOUDS_1</tspan>
-            <tspan x="5" dy="24" >W_DAY_WIND_SPEED_1</tspan>
-        </text>
-            <g transform="translate(10 100) scale(0.6)">
+            <rect id="Tag-1" x="0" y="0" width="110" height="180" style="fill:#ffffff;stroke:#000000;stroke-width:1px"/>
+            <text x="5" y="5" id="daily_1" style="font-style:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">
+                <tspan x="5" dy="15" style="font-weight:bold">WEATHER_DAY_DATETIME_1</tspan>
+                <tspan x="5" dy="24" >W_DAY_TEMP_MIN_1/</tspan><tspan dx="0" dy="0" style="fill:#ff0000">W_DAY_TEMP_MAX_1</tspan>
+                <tspan x="5" dy="24" >W_DAY_POP_1</tspan>
+                <tspan x="5" dy="24" >W_DAY_CLOUDS_1</tspan>
+                <tspan x="5" dy="24" >W_DAY_WIND_SPEED_1</tspan>
+            </text>
+            <g transform="translate(10 110) scale(0.6)">
                 <use id="dayicon1" href="icons/W_DAY_ICON_1.svg" />
             </g>
         </g>
