@@ -45,7 +45,7 @@
                 <tspan x="8" dy="15" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_2</tspan>
                 <tspan x="8" dy="28" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_2</tspan>
                 <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_2</tspan>
-                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_WIND_SPEED_2</tspan>
+                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_WIND_DIR_2 W_HOUR_WIND_SPEED_2</tspan>
             </text>
             <g transform="translate(12 120) scale(0.6)">
                 <use id="houricon1" href="icons/W_HOUR_ICON_2.svg" />
@@ -57,7 +57,7 @@
                 <tspan x="8" dy="15" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_4</tspan>
                 <tspan x="8" dy="28" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_4</tspan>
                 <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_4</tspan>
-                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_WIND_SPEED_4</tspan>
+                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_WIND_DIR_4 W_HOUR_WIND_SPEED_4</tspan>
             </text>
             <g transform="scale(0.6) translate(12 200)">
                 <use id="houricon1" href="icons/W_HOUR_ICON_4.svg" />
@@ -69,7 +69,7 @@
                 <tspan x="8" dy="15" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_6</tspan>
                 <tspan x="8" dy="28" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_6</tspan>
                 <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_6</tspan>
-                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_WIND_SPEED_6</tspan>
+                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_WIND_DIR_6 W_HOUR_WIND_SPEED_6</tspan>
             </text>
             <g transform="scale(0.6) translate(12 200)">
                 <use id="houricon1" href="icons/W_HOUR_ICON_6.svg" />
@@ -81,7 +81,7 @@
                 <tspan x="8" dy="15" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_8</tspan>
                 <tspan x="8" dy="28" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_8</tspan>
                 <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_8</tspan>
-                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_WIND_SPEED_8</tspan>
+                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_WIND_DIR_8 W_HOUR_WIND_SPEED_8</tspan>
             </text>
             <g transform="scale(0.6) translate(12 200)">
                 <use id="houricon1" href="icons/W_HOUR_ICON_8.svg" />
@@ -93,7 +93,7 @@
                 <tspan x="8" dy="15" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_A</tspan>
                 <tspan x="8" dy="28" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_A</tspan>
                 <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_A</tspan>
-                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_WIND_SPEED_A</tspan>
+                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_WIND_DIR_A W_HOUR_WIND_SPEED_A</tspan>
             </text>
             <g transform="scale(0.6) translate(12 200)">
                 <use id="houricon1" href="icons/W_HOUR_ICON_A.svg" />
@@ -101,11 +101,11 @@
         </g>
         <g id="g_h6" transform="translate(696 92)">
             <rect id="bg_h6" x="-3" y="-4" width="90" height="195" style="fill:#ffffff;stroke:#000000;stroke-width:1px" />
-            <text x="8" y="4" id="hour_1">
-                <tspan x="8" dy="15" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_C</tspan>
-                <tspan x="8" dy="28" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_C</tspan>
-                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_C</tspan>
-                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_WIND_SPEED_C</tspan>
+            <text x="8" y="4" id="hour_1" style="font-style:normal;font-variant:normal;font-weight:300;font-size:20px;font-family:Roboto;">
+                <tspan x="8" dy="15" style="font-weight:bold">WEATHER_HOUR_DATETIME_C</tspan>
+                <tspan x="8" dy="28" >W_HOUR_TEMP_C</tspan>
+                <tspan x="8" dy="24" >W_HOUR_POP_C</tspan>
+                <tspan x="8" dy="24" >W_HOUR_WIND_DIR_C W_HOUR_WIND_SPEED_C</tspan>
             </text>
             <g transform="scale(0.6) translate(12 200)">
                 <use id="houricon1" href="icons/W_HOUR_ICON_C.svg" />
@@ -120,7 +120,7 @@
                 <tspan x="5" dy="15" style="font-size:20px;font-weight:bold">WEATHER_DAY_DATETIME_1</tspan>
                 <tspan x="5" dy="22" >W_DAY_TEMP_MIN_1/</tspan><tspan dx="0" dy="0" style="fill:#ff0000">W_DAY_TEMP_MAX_1</tspan>
                 <tspan x="5" dy="22" >W_DAY_POP_1/W_DAY_CLOUDS_1</tspan>
-                <tspan x="5" dy="22" >W_DAY_WIND_SPEED_1 W_DAY_WIND_DIR_1</tspan>
+                <tspan x="5" dy="22" >W_DAY_WIND_DIR_1 W_DAY_WIND_SPEED_1</tspan>
             </text>
             <g transform="translate(10 100) scale(0.6)">
                 <use id="dayicon1" href="icons/W_DAY_ICON_1.svg" />
@@ -132,7 +132,7 @@
                 <tspan x="5" dy="15" style="font-size:20px;font-weight:bold">WEATHER_DAY_DATETIME_2</tspan>
                 <tspan x="5" dy="22" >W_DAY_TEMP_MIN_2/</tspan><tspan dx="0" dy="0" style="fill:#ff0000">W_DAY_TEMP_MAX_2</tspan>
                 <tspan x="5" dy="22" >W_DAY_POP_2/W_DAY_CLOUDS_2</tspan>
-                <tspan x="5" dy="22" >W_DAY_WIND_SPEED_2 W_DAY_WIND_DIR_2</tspan>
+                <tspan x="5" dy="22" >W_DAY_WIND_DIR_2 W_DAY_WIND_SPEED_2 </tspan>
             </text>
             <g transform="translate(10 100) scale(0.6)">
                 <use id="dayicon1" href="icons/W_DAY_ICON_2.svg" />
@@ -144,7 +144,7 @@
                 <tspan x="5" dy="15" style="font-size:20px;font-weight:bold">WEATHER_DAY_DATETIME_3</tspan>
                 <tspan x="5" dy="22" >W_DAY_TEMP_MIN_3/</tspan><tspan dx="0" dy="0" style="fill:#ff0000">W_DAY_TEMP_MAX_3</tspan>
                 <tspan x="5" dy="22" >W_DAY_POP_3/W_DAY_CLOUDS_3</tspan>
-                <tspan x="5" dy="22" >W_DAY_WIND_SPEED_3 W_DAY_WIND_DIR_3</tspan>
+                <tspan x="5" dy="22" >W_DAY_WIND_DIR_3 W_DAY_WIND_SPEED_3</tspan>
             </text>
             <g transform="translate(10 100) scale(0.6)">
                 <use id="dayicon1" href="icons/W_DAY_ICON_3.svg" />
@@ -156,7 +156,7 @@
                 <tspan x="5" dy="15" style="font-size:20px;font-weight:bold">WEATHER_DAY_DATETIME_4</tspan>
                 <tspan x="5" dy="22" >W_DAY_TEMP_MIN_4/</tspan><tspan dx="0" dy="0" style="fill:#ff0000">W_DAY_TEMP_MAX_4</tspan>
                 <tspan x="5" dy="22" >W_DAY_POP_4/W_DAY_CLOUDS_4</tspan>
-                <tspan x="5" dy="22" >W_DAY_WIND_SPEED_4 W_DAY_WIND_DIR_4</tspan>
+                <tspan x="5" dy="22" >W_DAY_WIND_DIR_4 W_DAY_WIND_SPEED_4</tspan>
             </text>
             <g transform="translate(10 100) scale(0.6)">
                 <use id="dayicon1" href="icons/W_DAY_ICON_4.svg" />
@@ -168,7 +168,7 @@
                 <tspan x="5" dy="15" style="font-size:20px;font-weight:bold">WEATHER_DAY_DATETIME_5</tspan>
                 <tspan x="5" dy="22" >W_DAY_TEMP_MIN_5/</tspan><tspan dx="0" dy="0" style="fill:#ff0000">W_DAY_TEMP_MAX_5</tspan>
                 <tspan x="5" dy="22" >W_DAY_POP_5/W_DAY_CLOUDS_5</tspan>
-                <tspan x="5" dy="22" >W_DAY_WIND_SPEED_5 W_DAY_WIND_DIR_5</tspan>
+                <tspan x="5" dy="22" >W_DAY_WIND_DIR_5 W_DAY_WIND_SPEED_5</tspan>
             </text>
             <g transform="translate(10 100) scale(0.6)">
                 <use id="dayicon1" href="icons/W_DAY_ICON_5.svg" />
@@ -180,7 +180,7 @@
                 <tspan x="5" dy="15" style="font-size:20px;font-weight:bold">WEATHER_DAY_DATETIME_6</tspan>
                 <tspan x="5" dy="22" >W_DAY_TEMP_MIN_6/</tspan><tspan dx="0" dy="0" style="fill:#ff0000">W_DAY_TEMP_MAX_6</tspan>
                 <tspan x="5" dy="22" >W_DAY_POP_6/W_DAY_CLOUDS_6</tspan>
-                <tspan x="5" dy="22" >W_DAY_WIND_SPEED_6 W_DAY_WIND_DIR_6</tspan>
+                <tspan x="5" dy="22" >W_DAY_WIND_DIR_6 W_DAY_WIND_SPEED_6</tspan>
             </text>
             <g transform="translate(10 100) scale(0.6)">
                 <use id="dayicon1" href="icons/W_DAY_ICON_6.svg" />
@@ -192,7 +192,7 @@
                 <tspan x="5" dy="15" style="font-size:20px;font-weight:bold">WEATHER_DAY_DATETIME_7</tspan>
                 <tspan x="5" dy="22" >W_DAY_TEMP_MIN_7/</tspan><tspan dx="0" dy="0" style="fill:#ff0000">W_DAY_TEMP_MAX_7</tspan>
                 <tspan x="5" dy="22" >W_DAY_POP_7/W_DAY_CLOUDS_7</tspan>
-                <tspan x="5" dy="22" >W_DAY_WIND_SPEED_7 W_DAY_WIND_DIR_7</tspan>
+                <tspan x="5" dy="22" >W_DAY_WIND_DIR_7 W_DAY_WIND_SPEED_7</tspan>
             </text>
             <g transform="translate(10 100) scale(0.6)">
                 <use id="dayicon1" href="icons/W_DAY_ICON_7.svg" />

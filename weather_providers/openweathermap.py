@@ -136,6 +136,7 @@ class OpenWeatherMap(BaseWeatherProvider):
             entry["pop"] = hour_entry["pop"]
             entry["feels_like"] = hour_entry["feels_like"]
             entry["wind_speed"] = hour_entry["wind_speed"]
+            entry["wind_direction"] = hour_entry["wind_direction"]
             entry["clouds"] = hour_entry["clouds"]
             entry["icon"] = self.get_icon_from_openweathermap_weathercode(hour_entry["weather"][0]["id"], self.is_daytime(self.location_lat, self.location_long))
             entry["description"] = hour_entry["weather"][0]["description"].title()
