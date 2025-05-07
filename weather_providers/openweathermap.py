@@ -85,6 +85,18 @@ class OpenWeatherMap(BaseWeatherProvider):
 
         return icon
 
+    # Convert deg into name of wind direction
+    def wind_deg2txt(self, deg):
+        #                 0   1    2   3    4   5    6   7    8
+        wind_dir_name = ['N', 'NO', 'O', 'SO', 'S', 'SW', 'W', 'NW', 'N']
+
+        wind_sections = 360 / 8
+        offset = wind_sections / 2
+        # range(start, stop[, step])
+        y = int((deg + offset) / wind_sections)
+
+        return wind_dir_name[y]
+
     # Get weather from OpenWeatherMap One Call
     # https://openweathermap.org/api/one-call-api
     def get_weather(self):
@@ -145,6 +157,7 @@ class OpenWeatherMap(BaseWeatherProvider):
             entry["temperatureMax"] = day_entry["temp"]["max"]
             entry["pop"] = day_entry["pop"]
             entry["wind_speed"] = day_entry["wind_speed"]
+            entry["wind_direction"] = self.wind_deg2txt(day_entry["wind_deg"])
             entry["clouds"] = day_entry["clouds"]
             entry["icon"] = self.get_icon_from_openweathermap_weathercode(day_entry["weather"][0]["id"], self.is_daytime(self.location_lat, self.location_long))
             entry["description"] = day_entry["weather"][0]["description"].title()
