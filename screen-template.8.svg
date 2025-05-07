@@ -126,95 +126,77 @@
                 <use id="dayicon1" href="icons/W_DAY_ICON_1.svg" />
             </g>
         </g>
-        <rect id="Tag-2"
-              x="125"
-              y="290"
-              width="110"
-              height="180"
-              style="fill:#000000;stroke:#000000;stroke-width:1px"/>
-        <text x="130" y="295" id="daily_2">
-            <tspan x="130" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">WEATHER_DAY_DATETIME_2</tspan>
-            <tspan x="130" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">min/max</tspan>
-            <tspan x="130" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_DAY_TEMP_MIN_2/W_DAY_TEMP_MAX_2</tspan>
-            <tspan x="130" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Regen/Wolken</tspan>
-            <tspan x="130" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_DAY_POP_2/W_DAY_CLOUDS_2</tspan>
-            <tspan x="130" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Wind</tspan>
-            <tspan x="130" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_DAY_WIND_SPEED_2 W_DAY_WIND_DIR_2</tspan>
-        </text>
-        <rect id="Tag-3"
-              x="235"
-              y="290"
-              width="110"
-              height="180"
-              style="fill:#ffffff;stroke:#000000;stroke-width:1px"/>
-        <text x="240" y="295" id="daily_3">
-            <tspan x="240" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_DAY_DATETIME_3</tspan>
-            <tspan x="240" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">min/max</tspan>
-            <tspan x="240" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_DAY_TEMP_MIN_3/W_DAY_TEMP_MAX_3</tspan>
-            <tspan x="240" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Regen/Wolken</tspan>
-            <tspan x="240" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_DAY_POP_3/W_DAY_CLOUDS_3</tspan>
-            <tspan x="240" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Wind</tspan>
-            <tspan x="240" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_DAY_WIND_SPEED_3</tspan>
-        </text>
-        <rect id="Tag-4"
-              x="345"
-              y="290"
-              width="110"
-              height="180"
-              style="fill:#000000;stroke:#000000;stroke-width:1px"/>
-        <text x="350" y="295" id="daily_4">
-            <tspan x="350" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">WEATHER_DAY_DATETIME_4</tspan>
-            <tspan x="350" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">min/max</tspan>
-            <tspan x="350" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_DAY_TEMP_MIN_4/W_DAY_TEMP_MAX_4</tspan>
-            <tspan x="350" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Regen/Wolken</tspan>
-            <tspan x="350" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_DAY_POP_4/W_DAY_CLOUDS_4</tspan>
-            <tspan x="350" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Wind</tspan>
-            <tspan x="350" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_DAY_WIND_SPEED_4</tspan>
-        </text>
-        <rect id="Tag-5"
-              x="455"
-              y="290"
-              width="110"
-              height="180"
-              style="fill:#ffffff;stroke:#000000;stroke-width:1px"/>
-        <text x="460" y="295" id="daily_5">
-            <tspan x="460" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_DAY_DATETIME_5</tspan>
-            <tspan x="460" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">min/max</tspan>
-            <tspan x="460" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_DAY_TEMP_MIN_5/W_DAY_TEMP_MAX_5</tspan>
-            <tspan x="460" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Regen/Wolken</tspan>
-            <tspan x="460" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_DAY_POP_5/W_DAY_CLOUDS_5</tspan>
-            <tspan x="460" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Wind</tspan>
-            <tspan x="460" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_DAY_WIND_SPEED_5</tspan>
-        </text>
-        <rect id="Tag-6"
-              x="565"
-              y="290"
-              width="110"
-              height="180"
-              style="fill:#000000;stroke:#000000;stroke-width:1px"/>
-        <text x="570" y="295" id="daily_6">
-            <tspan x="570" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">WEATHER_DAY_DATETIME_6</tspan>
-            <tspan x="570" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">min/max</tspan>
-            <tspan x="570" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_DAY_TEMP_MIN_6/W_DAY_TEMP_MAX_6</tspan>
-            <tspan x="570" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Regen/Wolken</tspan>
-            <tspan x="570" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_DAY_POP_6/W_DAY_CLOUDS_6</tspan>
-            <tspan x="570" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;fill:#ffffff">Wind</tspan>
-            <tspan x="570" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;fill:#ffffff">W_DAY_WIND_SPEED_6</tspan>
-        </text>
-        <rect id="Tag-7"
-              x="675"
-              y="290"
-              width="110"
-              height="180"
-              style="fill:#ffffff;stroke:#000000;stroke-width:1px"/>
-        <text x="680" y="295" id="daily_7">
-            <tspan x="680" dy="15" style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_DAY_DATETIME_7</tspan>
-            <tspan x="680" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">min/max</tspan>
-            <tspan x="680" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_DAY_TEMP_MIN_7/W_DAY_TEMP_MAX_7</tspan>
-            <tspan x="680" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Regen/Wolken</tspan>
-            <tspan x="680" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_DAY_POP_7/W_DAY_CLOUDS_7</tspan>
-            <tspan x="680" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:14px;font-family:Roboto;">Wind</tspan>
-            <tspan x="680" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_DAY_WIND_SPEED_7</tspan>
-        </text>
+        <g transform="translate(125 290)">
+            <rect id="Tag-2" x="0" y="0" width="110" height="180" style="fill:#ffffff;stroke:#000000;stroke-width:1px"/>
+            <text x="5" y="5" id="daily_2" style="font-style:normal;font-weight:300;font-stretch:normal;font-size:18px;font-family:Roboto;">
+                <tspan x="5" dy="15" style="font-size:20px;font-weight:bold">WEATHER_DAY_DATETIME_2</tspan>
+                <tspan x="5" dy="22" >W_DAY_TEMP_MIN_2/</tspan><tspan dx="0" dy="0" style="fill:#ff0000">W_DAY_TEMP_MAX_2</tspan>
+                <tspan x="5" dy="22" >W_DAY_POP_2/W_DAY_CLOUDS_2</tspan>
+                <tspan x="5" dy="22" >W_DAY_WIND_SPEED_2 W_DAY_WIND_DIR_2</tspan>
+            </text>
+            <g transform="translate(10 100) scale(0.6)">
+                <use id="dayicon1" href="icons/W_DAY_ICON_2.svg" />
+            </g>
+        </g>
+        <g transform="translate(235 290)">
+            <rect id="Tag-3" x="0" y="0" width="110" height="180" style="fill:#ffffff;stroke:#000000;stroke-width:1px"/>
+            <text x="5" y="5" id="daily_3" style="font-style:normal;font-weight:300;font-stretch:normal;font-size:18px;font-family:Roboto;">
+                <tspan x="5" dy="15" style="font-size:20px;font-weight:bold">WEATHER_DAY_DATETIME_3</tspan>
+                <tspan x="5" dy="22" >W_DAY_TEMP_MIN_3/</tspan><tspan dx="0" dy="0" style="fill:#ff0000">W_DAY_TEMP_MAX_3</tspan>
+                <tspan x="5" dy="22" >W_DAY_POP_3/W_DAY_CLOUDS_3</tspan>
+                <tspan x="5" dy="22" >W_DAY_WIND_SPEED_3 W_DAY_WIND_DIR_3</tspan>
+            </text>
+            <g transform="translate(10 100) scale(0.6)">
+                <use id="dayicon1" href="icons/W_DAY_ICON_3.svg" />
+            </g>
+        </g>
+        <g transform="translate(345 290)">
+            <rect id="Tag-4" x="0" y="0" width="110" height="180" style="fill:#ffffff;stroke:#000000;stroke-width:1px"/>
+            <text x="5" y="5" id="daily_4" style="font-style:normal;font-weight:300;font-stretch:normal;font-size:18px;font-family:Roboto;">
+                <tspan x="5" dy="15" style="font-size:20px;font-weight:bold">WEATHER_DAY_DATETIME_4</tspan>
+                <tspan x="5" dy="22" >W_DAY_TEMP_MIN_4/</tspan><tspan dx="0" dy="0" style="fill:#ff0000">W_DAY_TEMP_MAX_4</tspan>
+                <tspan x="5" dy="22" >W_DAY_POP_4/W_DAY_CLOUDS_4</tspan>
+                <tspan x="5" dy="22" >W_DAY_WIND_SPEED_4 W_DAY_WIND_DIR_4</tspan>
+            </text>
+            <g transform="translate(10 100) scale(0.6)">
+                <use id="dayicon1" href="icons/W_DAY_ICON_4.svg" />
+            </g>
+        </g>
+        <g transform="translate(455 290)">
+            <rect id="Tag-5" x="0" y="0" width="110" height="180" style="fill:#ffffff;stroke:#000000;stroke-width:1px"/>
+            <text x="5" y="5" id="daily_5" style="font-style:normal;font-weight:300;font-stretch:normal;font-size:18px;font-family:Roboto;">
+                <tspan x="5" dy="15" style="font-size:20px;font-weight:bold">WEATHER_DAY_DATETIME_5</tspan>
+                <tspan x="5" dy="22" >W_DAY_TEMP_MIN_5/</tspan><tspan dx="0" dy="0" style="fill:#ff0000">W_DAY_TEMP_MAX_5</tspan>
+                <tspan x="5" dy="22" >W_DAY_POP_5/W_DAY_CLOUDS_5</tspan>
+                <tspan x="5" dy="22" >W_DAY_WIND_SPEED_5 W_DAY_WIND_DIR_5</tspan>
+            </text>
+            <g transform="translate(10 100) scale(0.6)">
+                <use id="dayicon1" href="icons/W_DAY_ICON_5.svg" />
+            </g>
+        </g>
+        <g transform="translate(565 290)">
+            <rect id="Tag-6" x="0" y="0" width="110" height="180" style="fill:#ffffff;stroke:#000000;stroke-width:1px"/>
+            <text x="5" y="5" id="daily_6" style="font-style:normal;font-weight:300;font-stretch:normal;font-size:18px;font-family:Roboto;">
+                <tspan x="5" dy="15" style="font-size:20px;font-weight:bold">WEATHER_DAY_DATETIME_6</tspan>
+                <tspan x="5" dy="22" >W_DAY_TEMP_MIN_6/</tspan><tspan dx="0" dy="0" style="fill:#ff0000">W_DAY_TEMP_MAX_6</tspan>
+                <tspan x="5" dy="22" >W_DAY_POP_6/W_DAY_CLOUDS_6</tspan>
+                <tspan x="5" dy="22" >W_DAY_WIND_SPEED_6 W_DAY_WIND_DIR_6</tspan>
+            </text>
+            <g transform="translate(10 100) scale(0.6)">
+                <use id="dayicon1" href="icons/W_DAY_ICON_6.svg" />
+            </g>
+        </g>
+        <g transform="translate(675 290)">
+            <rect id="Tag-7" x="0" y="0" width="110" height="180" style="fill:#ffffff;stroke:#000000;stroke-width:1px"/>
+            <text x="5" y="5" id="daily_7" style="font-style:normal;font-weight:300;font-stretch:normal;font-size:18px;font-family:Roboto;">
+                <tspan x="5" dy="15" style="font-size:20px;font-weight:bold">WEATHER_DAY_DATETIME_7</tspan>
+                <tspan x="5" dy="22" >W_DAY_TEMP_MIN_7/</tspan><tspan dx="0" dy="0" style="fill:#ff0000">W_DAY_TEMP_MAX_7</tspan>
+                <tspan x="5" dy="22" >W_DAY_POP_7/W_DAY_CLOUDS_7</tspan>
+                <tspan x="5" dy="22" >W_DAY_WIND_SPEED_7 W_DAY_WIND_DIR_7</tspan>
+            </text>
+            <g transform="translate(10 100) scale(0.6)">
+                <use id="dayicon1" href="icons/W_DAY_ICON_7.svg" />
+            </g>
+        </g>
     </g>
 </svg>
