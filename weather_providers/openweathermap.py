@@ -160,7 +160,7 @@ class OpenWeatherMap(BaseWeatherProvider):
             entry["wind_speed"] = day_entry["wind_speed"]
             entry["wind_direction"] = self.wind_deg2txt(day_entry["wind_deg"])
             entry["clouds"] = day_entry["clouds"]
-            entry["icon"] = self.get_icon_from_openweathermap_weathercode(day_entry["weather"][0]["id"], self.is_daytime(self.location_lat, self.location_long))
+            entry["icon"] = self.get_icon_from_openweathermap_weathercode(day_entry["weather"][0]["id"], 1)
             entry["description"] = day_entry["weather"][0]["description"].title()
             logging.debug(entry)
             daily_data.append(entry)
