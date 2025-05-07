@@ -39,13 +39,13 @@
     </g>
 
     <g id="Hourly-Forecast">
-        <g id="g102" transform="translate(241 92)">
+        <g id="g_h1" transform="translate(241 92)">
             <rect id="bg_h1" x="-3" y="-4" width="100" height="195" style="fill:#ffffff;stroke:#000000;stroke-width:1px" />
-            <text x="10" y="0" id="hour_1">
-                <tspan x="10" dy="15" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_1</tspan>
-                <tspan x="10" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_1</tspan>
-                <tspan x="10" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_1</tspan>
-                <tspan x="10" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_WIND_SPEED_1</tspan>
+            <text x="8" y="4" id="hour_1">
+                <tspan x="8" dy="15" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20px;font-family:Roboto;">WEATHER_HOUR_DATETIME_1</tspan>
+                <tspan x="8" dy="25" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_TEMP_1</tspan>
+                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_POP_1</tspan>
+                <tspan x="8" dy="24" style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:20px;font-family:Roboto;">W_HOUR_WIND_SPEED_1</tspan>
             </text>
             <g transform="scale(0.6) translate(12 180)">
                 <use id="houricon1" href="icons/W_HOUR_ICON_1.svg" />
