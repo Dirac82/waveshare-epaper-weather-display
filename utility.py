@@ -6,6 +6,8 @@ from http.client import HTTPConnection
 import requests
 import datetime
 import pytz
+from  zipfile import ZipFile
+from io import BytesIO
 import json
 import xml.etree.ElementTree as ET
 from astral import LocationInfo
@@ -113,7 +115,7 @@ def get_json_from_url(url, headers, cache_file_name, ttl):
     return response_json
 
 
-def get_xml_from_url(url, headers, cache_file_name, ttl):
+def get_xml_from_url(url, headers, cache_file_name, ttl, is_zipped=False):
     """
     Perform an HTTP GET for a `url` with optional `headers`.
     Caches the response in `cache_file_name` for `ttl` seconds.
@@ -126,7 +128,12 @@ def get_xml_from_url(url, headers, cache_file_name, ttl):
         try:
             response = requests.get(url, headers=headers)
             response.raise_for_status()
-            response_data = response.text
+
+            if is_zipped:
+                zfile = ZipFile(BytesIO(response.raw))
+                response_data = zfile.open(zfile.namelist()[0]).read()
+            else:
+                response_data = response.text
 
             with open(cache_file_name, 'w') as text_file:
                 text_file.write(response_data)

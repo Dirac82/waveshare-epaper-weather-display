@@ -98,10 +98,10 @@ class BaseWeatherProvider(ABC):
         """
         return get_json_from_url(url, headers, "cache_weather.json", self.ttl)
 
-    def get_response_xml(self, url, headers={}):
+    def get_response_xml(self, url, headers={}, is_zipped=False):
         """
         Perform an HTTP GET for a `url` with optional `headers`.
         Caches the response in `cache_file_name` for WEATHER_TTL seconds.
         Returns the response as an XML ElementTree
         """
-        return get_xml_from_url(url, headers, "cache_weather.xml", self.ttl)
+        return get_xml_from_url(url, headers, "cache_weather.xml", self.ttl, is_zipped)
