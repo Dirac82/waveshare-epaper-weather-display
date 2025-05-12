@@ -1,9 +1,11 @@
+import datetime
 import json
 import logging
 import time
+import pandas as pd
 from  zipfile import ZipFile
 from io import StringIO, BytesIO
-import xml.etree.cElementTree as et
+from lxml import etree
 from weather_providers.base_provider import BaseWeatherProvider
 
 try:  # Python 3
@@ -17,7 +19,7 @@ except ImportError:
 
 class DWD(BaseWeatherProvider):
     def __init__(self, dwd_location_id, units):
-        self.location_id = dwd_locagion_id
+        self.location_id = dwd_location_id
         self.units = units
 
         self.station_list_url = 'https://www.dwd.de/DE/leistungen/klimadatendeutschland/statliste/statlex_html.html?view=nasPublication&nn=16102'
@@ -51,70 +53,93 @@ class DWD(BaseWeatherProvider):
         return self._download_unpack(dl_url)
 
     def station_forecast(self):
-        iodata = self.get_response_xml(self.get_url(), None, True)
-        if iodata is None:
+        xml_data = self.get_response_xml(self.get_url(), None, True)
+        if xml_data is None:
             return None
         logging.debug(f"Starting to parse station {self.location_id} xml...")
-        xmlroot = et.fromstring(iodata)
-        logging.debug("parsed xml")
-        timesteps = []
-        locations = []
-        dfd = None
-        for node in xmlroot:
-            tag = self._filter_tag(node.tag)
-            att = self._filter_attrib_dict(node.attrib)
-            location = None
-            for node2 in node:
-                tag = self._filter_tag(node2.tag)
-                att = self._filter_attrib_dict(node2.attrib)
-                if tag == "Placemark":
-                    location = {}
-                    dfd = pd.DataFrame({'time': timesteps})
-                    dfd.index = pd.to_datetime(dfd.pop('time'))
-                for node3 in node2:
-                    tag = self._filter_tag(node3.tag)
-                    att = self._filter_attrib_dict(node3.attrib)
-                    for node4 in node3:
-                        tag = self._filter_tag(node4.tag)
-                        att = self._filter_attrib_dict(node4.attrib)
-                        if tag == 'Forecast':
-                            key = att['elementName']
-                        for node5 in node4:
-                            data = None
-                            tag = self._filter_tag(node5.tag)
-                            att = self._filter_attrib_dict(node5.attrib)
-                            text = node5.text
-                            if tag == 'TimeStep':
-                                timesteps.append(text)
-                                text = None
-                            if text is not None:
-                                data = text.split()
-                            if data is not None and tag == 'value':
-                                dfd[key] = pd.to_numeric(
-                                    pd.Series(data, index=dfd.index), errors='coerce')
-                            else:
-                                data = None
-            if location is not None:
-                dfd.index = dfd.index.tz_convert(tz=None)
-                location['forecast'] = dfd
-                locations.append(location)
-                location = None
 
-        try:
-            all_forecasts = {'timestamp': time.time(),
-                             locations: []}
-            forecasts = json.loads(locations.to_json())
-            forecast['timestamp'] = time.time()
-        except Exception as e:
-            self.log.warning(f'Failed to convert forecast to json: {e}')
-            return dfd
-        try:
-            with open(forecast_cache_file, 'w') as f:
-                json.dump(forecast, f)
-        except Exception as e:
-            self.log.warning(f'Failed to write forecast cache file {forecast_cache_file}: {e}')
+        # XML parsen
+        root = xml_data #etree.fromstring(xml_data)
+        ns = {
+            'kml': 'http://www.opengis.net/kml/2.2',
+            'dwd': 'https://opendata.dwd.de/weather/lib/pointforecast_dwd_extension_V1_0.xsd'
+        }
 
-    if station_id is None:
-        return locations
-    else:
-        return dfd
+        # Name der Station herausfinden
+        station_name = None
+        for placemark in root.findall('.//kml:Placemark', ns):
+            loc = placemark.find('kml:name', ns)
+            if loc is not None and loc.text == str(self.location_id):
+                station_name = placemark.find('kml:description', ns).text
+                break
+
+        if not station_name:
+            raise ValueError(f"Station mit ID {self.location_id} nicht gefunden.")
+
+        # Zeitstempel extrahieren
+        time_steps = root.find('.//dwd:ProductDefinition/dwd:ForecastTimeSteps', ns)
+        times = [pd.to_datetime(t.text) for t in time_steps.findall('dwd:TimeStep', ns)]
+
+        # Vorhersagewerte für die Zielstation extrahieren
+        forecasts = []
+        for location in root.findall('.//kml:Placemark', ns):
+            if location.find('kml:name', ns).text != str(self.location_id):
+                continue
+            for param in location.findall('kml:ExtendedData/dwd:Forecast', ns):
+                variable = param.attrib['{https://opendata.dwd.de/weather/lib/pointforecast_dwd_extension_V1_0.xsd}elementName']
+                param_value = param.find('dwd:value',ns)
+                values = [float(v) if v not in ('NaN', '-') else None for v in param_value.text.strip().split()]
+                for i in range(0, len(values)-1):
+                    forecasts.append({
+                        'station_id': self.location_id,
+                        'station_name': station_name,
+                        'time': times[i],
+                        'variable': variable,
+                        'value': values[i]
+                    })
+
+        df = pd.DataFrame(forecasts)
+        return df
+
+    def get_weather(self):
+        weather = {}
+        #weather["current"] = self.get_current_weather()
+        weather["hourly"] = self.get_hourly_forecast()
+        #weather["daily"] = self.get_daily_forecast()
+
+        return weather
+
+    def get_hourly_forecast(self):
+        df = self.station_forecast()
+        records = df.set_index('time').to_dict('records')
+
+        forecast = []
+        for i in records.index[0:12]:
+            entry = {}
+            entry["dt"] = datetime.datetime.fromisoformat(str(i)).timestamp()
+            entry["temperature"] = records[i].get('PPP')
+            entry["wind_speed"] = records[i].get('FF')
+            entry["wind_direction"] = records[i].get('DD')
+            entry["clouds"] = records[i].get('N')
+            entry["pop"] = records[i].get('wwP')
+
+            #entry["feels_like"] = hour_entry["feels_like"]
+            #entry["icon"] = self.get_icon_from_openweathermap_weathercode(hour_entry["weather"][0]["id"],
+            #                                                              self.is_daytime(self.location_lat,
+            #                                                                              self.location_long))
+            #entry["description"] = hour_entry["weather"][0]["description"].title()
+
+            forecast.append(entry)
+
+        return forecast
+
+    def get_daily_forecast(self):
+        return {}
+
+def main():
+    weather = DWD(10853, "metric").get_weather()
+
+    print(weather)
+
+if __name__ == "__main__":
+    main()
