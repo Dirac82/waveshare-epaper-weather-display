@@ -69,6 +69,12 @@ class BaseWeatherProvider(ABC):
         """
         return (float(celsius)*9/5) + 32
 
+    def k_to_c(self, kelvin):
+        """
+        Return the Celsius value from a given Kelvin
+        """
+        return float(kelvin)+273.15
+
     def is_daytime(self, location_lat, location_long):
         """
         Return whether it's daytime for a given lat/long.
