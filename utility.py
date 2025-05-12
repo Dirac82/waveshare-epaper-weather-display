@@ -126,12 +126,13 @@ def get_xml_from_url(url, headers, cache_file_name, ttl, is_zipped=False):
     if (is_stale(cache_file_name, ttl)):
         logging.info("Cache file is stale. Fetching from source.")
         try:
-            response = requests.get(url, headers=headers)
+            response = requests.get(url, headers=headers, stream=is_zipped)
             response.raise_for_status()
 
             if is_zipped:
-                zfile = ZipFile(BytesIO(response.raw))
-                response_data = zfile.open(zfile.namelist()[0]).read()
+                zfile = ZipFile(BytesIO(response.content), 'r')
+                xml_file = zfile.open(zfile.namelist()[0], 'r').read()
+                response_data = xml_file.decode("ISO-8859-1")
             else:
                 response_data = response.text
 
