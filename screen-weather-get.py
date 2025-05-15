@@ -4,7 +4,7 @@ import datetime
 import sys
 import os
 import logging
-from weather_providers import openweathermap
+from weather_providers import openweathermap, dwd
 from utility import get_formatted_time, update_svg, configure_logging, configure_locale
 import textwrap
 
@@ -27,9 +27,11 @@ def get_weather(location_lat, location_long, units):
 
     # gather relevant environment configs
     openweathermap_apikey = os.getenv("OPENWEATHERMAP_APIKEY")
+    dwd_station_id = os.getenv("DWD_STATION_ID")
 
     if (
         not openweathermap_apikey
+        and not dwd_station_id
     ):
         logging.error("No weather provider has been configured (OpenWeatherMap)")
         sys.exit(1)
@@ -40,10 +42,10 @@ def get_weather(location_lat, location_long, units):
                                                          location_lat,
                                                          location_long,
                                                          units)
-        hourly_weather = weather_provider.get_hourly_forecast()
-        logging.info("hourly_forecast[{}] - {}".format(len(hourly_weather), hourly_weather[0:12]))
-        daily_weather = weather_provider.get_daily_forecast()
-        logging.info("daily_forecast[{}] - {}".format(len(daily_weather), daily_weather))
+    elif dwd_station_id:
+        logging.info("Getting weather from DWD")
+        weather_provider = dwd.DWD(dwd_station_id,
+                                   units)
 
     weather = weather_provider.get_weather()
     logging.info("weather - {}".format(weather))
@@ -93,7 +95,6 @@ def main():
 
         'WEATHER_HOUR_DATETIME_1': datetime.datetime.fromtimestamp(weather["hourly"][1]["dt"]).strftime("%H"),
         'W_HOUR_TEMP_1': "{}{}".format(str(round(weather["hourly"][1]["temperature"])), degrees),
-        'W_HOUR_FEEL_1': "{}{}".format(str(round(weather["hourly"][1]["feels_like"])), degrees),
         'W_HOUR_CLOUDS_1': "{}%".format(str(round(weather["hourly"][1]["clouds"]))),
         'W_HOUR_POP_1': "{}%".format(str(round(weather["hourly"][1]["pop"]*100))),
         'W_HOUR_WIND_SPEED_1': "{}m/s".format(str(round(weather["hourly"][1]["wind_speed"]))),
@@ -103,7 +104,6 @@ def main():
 
         'WEATHER_HOUR_DATETIME_2': datetime.datetime.fromtimestamp(weather["hourly"][2]["dt"]).strftime("%H"),
         'W_HOUR_TEMP_2': "{}{}".format(str(round(weather["hourly"][2]["temperature"])), degrees),
-        'W_HOUR_FEEL_2': "{}{}".format(str(round(weather["hourly"][2]["feels_like"])), degrees),
         'W_HOUR_CLOUDS_2': "{}%".format(str(round(weather["hourly"][2]["clouds"]))),
         'W_HOUR_POP_2': "{}%".format(str(round(weather["hourly"][2]["pop"]*100))),
         'W_HOUR_WIND_SPEED_2': "{}m/s".format(str(round(weather["hourly"][2]["wind_speed"]))),
@@ -113,7 +113,6 @@ def main():
 
         'WEATHER_HOUR_DATETIME_3': datetime.datetime.fromtimestamp(weather["hourly"][3]["dt"]).strftime("%H"),
         'W_HOUR_TEMP_3': "{}{}".format(str(round(weather["hourly"][3]["temperature"])), degrees),
-        'W_HOUR_FEEL_3': "{}{}".format(str(round(weather["hourly"][3]["feels_like"])), degrees),
         'W_HOUR_CLOUDS_3': "{}%".format(str(round(weather["hourly"][3]["clouds"]))),
         'W_HOUR_POP_3': "{}%".format(str(round(weather["hourly"][3]["pop"]*100))),
         'W_HOUR_WIND_SPEED_3': "{}m/s".format(str(round(weather["hourly"][3]["wind_speed"]))),
@@ -123,7 +122,6 @@ def main():
 
         'WEATHER_HOUR_DATETIME_4': datetime.datetime.fromtimestamp(weather["hourly"][4]["dt"]).strftime("%H"),
         'W_HOUR_TEMP_4': "{}{}".format(str(round(weather["hourly"][4]["temperature"])), degrees),
-        'W_HOUR_FEEL_4': "{}{}".format(str(round(weather["hourly"][4]["feels_like"])), degrees),
         'W_HOUR_CLOUDS_4': "{}%".format(str(round(weather["hourly"][4]["clouds"]))),
         'W_HOUR_POP_4': "{}%".format(str(round(weather["hourly"][4]["pop"]*100))),
         'W_HOUR_WIND_SPEED_4': "{}m/s".format(str(round(weather["hourly"][4]["wind_speed"]))),
@@ -133,7 +131,6 @@ def main():
 
         'WEATHER_HOUR_DATETIME_5': datetime.datetime.fromtimestamp(weather["hourly"][5]["dt"]).strftime("%H"),
         'W_HOUR_TEMP_5': "{}{}".format(str(round(weather["hourly"][5]["temperature"])), degrees),
-        'W_HOUR_FEEL_5': "{}{}".format(str(round(weather["hourly"][5]["feels_like"])), degrees),
         'W_HOUR_CLOUDS_5': "{}%".format(str(round(weather["hourly"][5]["clouds"]))),
         'W_HOUR_POP_5': "{}%".format(str(round(weather["hourly"][5]["pop"]*100))),
         'W_HOUR_WIND_SPEED_5': "{}m/s".format(str(round(weather["hourly"][5]["wind_speed"]))),
@@ -143,7 +140,6 @@ def main():
 
         'WEATHER_HOUR_DATETIME_6': datetime.datetime.fromtimestamp(weather["hourly"][6]["dt"]).strftime("%H"),
         'W_HOUR_TEMP_6': "{}{}".format(str(round(weather["hourly"][6]["temperature"])), degrees),
-        'W_HOUR_FEEL_6': "{}{}".format(str(round(weather["hourly"][6]["feels_like"])), degrees),
         'W_HOUR_CLOUDS_6': "{}%".format(str(round(weather["hourly"][6]["clouds"]))),
         'W_HOUR_POP_6': "{}%".format(str(round(weather["hourly"][6]["pop"]*100))),
         'W_HOUR_WIND_SPEED_6': "{}m/s".format(str(round(weather["hourly"][6]["wind_speed"]))),
@@ -153,7 +149,6 @@ def main():
 
         'WEATHER_HOUR_DATETIME_7': datetime.datetime.fromtimestamp(weather["hourly"][7]["dt"]).strftime("%H"),
         'W_HOUR_TEMP_7': "{}{}".format(str(round(weather["hourly"][7]["temperature"])), degrees),
-        'W_HOUR_FEEL_7': "{}{}".format(str(round(weather["hourly"][7]["feels_like"])), degrees),
         'W_HOUR_CLOUDS_7': "{}%".format(str(round(weather["hourly"][7]["clouds"]))),
         'W_HOUR_POP_7': "{}%".format(str(round(weather["hourly"][7]["pop"]*100))),
         'W_HOUR_WIND_SPEED_7': "{}m/s".format(str(round(weather["hourly"][7]["wind_speed"]))),
@@ -163,7 +158,6 @@ def main():
 
         'WEATHER_HOUR_DATETIME_8': datetime.datetime.fromtimestamp(weather["hourly"][8]["dt"]).strftime("%H"),
         'W_HOUR_TEMP_8': "{}{}".format(str(round(weather["hourly"][8]["temperature"])), degrees),
-        'W_HOUR_FEEL_8': "{}{}".format(str(round(weather["hourly"][8]["feels_like"])), degrees),
         'W_HOUR_CLOUDS_8': "{}%".format(str(round(weather["hourly"][8]["clouds"]))),
         'W_HOUR_POP_8': "{}%".format(str(round(weather["hourly"][8]["pop"]*100))),
         'W_HOUR_WIND_SPEED_8': "{}m/s".format(str(round(weather["hourly"][8]["wind_speed"]))),
@@ -173,7 +167,6 @@ def main():
 
         'WEATHER_HOUR_DATETIME_9': datetime.datetime.fromtimestamp(weather["hourly"][9]["dt"]).strftime("%H"),
         'W_HOUR_TEMP_9': "{}{}".format(str(round(weather["hourly"][9]["temperature"])), degrees),
-        'W_HOUR_FEEL_9': "{}{}".format(str(round(weather["hourly"][9]["feels_like"])), degrees),
         'W_HOUR_CLOUDS_9': "{}%".format(str(round(weather["hourly"][9]["clouds"]))),
         'W_HOUR_POP_9': "{}%".format(str(round(weather["hourly"][9]["pop"]*100))),
         'W_HOUR_WIND_SPEED_9': "{}m/s".format(str(round(weather["hourly"][9]["wind_speed"]))),
@@ -183,7 +176,6 @@ def main():
 
         'WEATHER_HOUR_DATETIME_A': datetime.datetime.fromtimestamp(weather["hourly"][10]["dt"]).strftime("%H"),
         'W_HOUR_TEMP_A': "{}{}".format(str(round(weather["hourly"][10]["temperature"])), degrees),
-        'W_HOUR_FEEL_A': "{}{}".format(str(round(weather["hourly"][10]["feels_like"])), degrees),
         'W_HOUR_CLOUDS_A': "{}%".format(str(round(weather["hourly"][10]["clouds"]))),
         'W_HOUR_POP_A': "{}%".format(str(round(weather["hourly"][10]["pop"]*100))),
         'W_HOUR_WIND_SPEED_A': "{}m/s".format(str(round(weather["hourly"][10]["wind_speed"]))),
@@ -193,7 +185,6 @@ def main():
 
         'WEATHER_HOUR_DATETIME_B': datetime.datetime.fromtimestamp(weather["hourly"][11]["dt"]).strftime("%H"),
         'W_HOUR_TEMP_B': "{}{}".format(str(round(weather["hourly"][11]["temperature"])), degrees),
-        'W_HOUR_FEEL_B': "{}{}".format(str(round(weather["hourly"][11]["feels_like"])), degrees),
         'W_HOUR_CLOUDS_B': "{}%".format(str(round(weather["hourly"][11]["clouds"]))),
         'W_HOUR_POP_B': "{}%".format(str(round(weather["hourly"][11]["pop"]*100))),
         'W_HOUR_WIND_SPEED_B': "{}m/s".format(str(round(weather["hourly"][11]["wind_speed"]))),
@@ -203,7 +194,6 @@ def main():
 
         'WEATHER_HOUR_DATETIME_C': datetime.datetime.fromtimestamp(weather["hourly"][12]["dt"]).strftime("%H"),
         'W_HOUR_TEMP_C': "{}{}".format(str(round(weather["hourly"][12]["temperature"])), degrees),
-        'W_HOUR_FEEL_C': "{}{}".format(str(round(weather["hourly"][12]["feels_like"])), degrees),
         'W_HOUR_CLOUDS_C': "{}%".format(str(round(weather["hourly"][12]["clouds"]))),
         'W_HOUR_POP_C': "{}%".format(str(round(weather["hourly"][12]["pop"]*100))),
         'W_HOUR_WIND_SPEED_C': "{}m/s".format(str(round(weather["hourly"][12]["wind_speed"]))),
