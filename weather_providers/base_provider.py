@@ -73,7 +73,7 @@ class BaseWeatherProvider(ABC):
         """
         Return the Celsius value from a given Kelvin
         """
-        return float(kelvin)+273.15
+        return float(kelvin)-273.15
 
     def is_daytime(self, location_lat, location_long):
         """
@@ -95,6 +95,18 @@ class BaseWeatherProvider(ABC):
             .format(str(location_lat), str(location_long), str(verdict)))
 
         return verdict
+
+    # Convert deg into name of wind direction
+    def wind_deg2txt(self, deg):
+        #                 0   1    2   3    4   5    6   7    8
+        wind_dir_name = ['N', 'NO', 'O', 'SO', 'S', 'SW', 'W', 'NW', 'N']
+
+        wind_sections = 360 / 8
+        offset = wind_sections / 2
+        # range(start, stop[, step])
+        y = int((deg + offset) / wind_sections)
+
+        return wind_dir_name[y]
 
     def get_response_json(self, url, headers={}):
         """
