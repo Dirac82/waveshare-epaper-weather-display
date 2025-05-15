@@ -1,3 +1,4 @@
+import array
 import datetime
 import json
 import logging
@@ -29,6 +30,8 @@ class DWD(BaseWeatherProvider):
         self.forecast_station_url = 'https://opendata.dwd.de/weather/local_forecasts/mos/MOSMIX_L/single_stations/{0}/kml/MOSMIX_L_LATEST_{0}.kmz'
         self.forecast_max_cache_secs = 3600
 
+        self.df = None
+
     # Build the URL for the API call
     def get_url(self):
         url = (self.forecast_station_url
@@ -53,6 +56,7 @@ class DWD(BaseWeatherProvider):
         return self._download_unpack(dl_url)
 
     def station_forecast(self):
+        param_map = {"TTT": "temperature", "FF": "wind_speed", "DD": "wind_direction", "N": "clouds", "wwP": "pop"}
         xml_data = self.get_response_xml(self.get_url(), None, True)
         if xml_data is None:
             return None
@@ -80,6 +84,9 @@ class DWD(BaseWeatherProvider):
         time_steps = root.find('.//dwd:ProductDefinition/dwd:ForecastTimeSteps', ns)
         times = [pd.to_datetime(t.text) for t in time_steps.findall('dwd:TimeStep', ns)]
 
+        weather_data = {}
+        weather_data['times'] = times
+
         # Vorhersagewerte für die Zielstation extrahieren
         forecasts = []
         for location in root.findall('.//kml:Placemark', ns):
@@ -87,59 +94,92 @@ class DWD(BaseWeatherProvider):
                 continue
             for param in location.findall('kml:ExtendedData/dwd:Forecast', ns):
                 variable = param.attrib['{https://opendata.dwd.de/weather/lib/pointforecast_dwd_extension_V1_0.xsd}elementName']
-                param_value = param.find('dwd:value',ns)
-                values = [float(v) if v not in ('NaN', '-') else None for v in param_value.text.strip().split()]
-                for i in range(0, len(values)-1):
-                    forecasts.append({
-                        'station_id': self.location_id,
-                        'station_name': station_name,
-                        'time': times[i],
-                        'variable': variable,
-                        'value': values[i]
-                    })
+                if variable in ("TTT", "FF", "DD", "N", "wwP"):
+                    param_value = param.find('dwd:value',ns)
+                    values = [float(v) if v not in ('NaN', '-') else None for v in param_value.text.strip().split()]
+                    weather_data[param_map[variable]] = values
 
-        df = pd.DataFrame(forecasts)
+        df = pd.DataFrame(weather_data)
         return df
 
     def get_weather(self):
+        self.df = self.station_forecast()
+
         weather = {}
-        #weather["current"] = self.get_current_weather()
+        weather["current"] = self.get_current_weather()
         weather["hourly"] = self.get_hourly_forecast()
-        #weather["daily"] = self.get_daily_forecast()
+        weather["daily"] = self.get_daily_forecast()
 
         return weather
 
+    def get_icon(self):
+        '''TODO'''
+        return "climacell_clear_day"
+
+    def get_current_weather(self):
+        weather_data = self.df.sort_values(by='times').groupby(by=self.df['times'].dt.date, group_keys=True).agg(
+            {
+                'temperature': ['min', 'max'],
+                'wind_speed': ['min', 'max', 'mean', 'median'],
+                'wind_direction': ['mean', 'median'],
+                'clouds': ['min', 'max', 'mean', 'median'],
+                'pop': ['min', 'max', 'mean', 'median']
+            }
+        ).head(1)
+
+        weather = {}
+        weather["temperatureMin"] = self.k_to_c(weather_data["temperature", "min"].values[0])
+        weather["temperatureMax"] = self.k_to_c(weather_data["temperature", "max"].values[0])
+        weather["icon"] = self.get_icon()
+        weather["description"] = ""
+        logging.debug(weather)
+        return weather
+
     def get_hourly_forecast(self):
-        df = self.station_forecast()
-        records = df.set_index('time').to_dict('records')
+        hourly = self.df.sort_values(by ='times').head(14)
 
         forecast = []
-        for i in records.index[0:12]:
+        for i in hourly.index:
             entry = {}
-            entry["dt"] = datetime.datetime.fromisoformat(str(i)).timestamp()
-            entry["temperature"] = records[i].get('PPP')
-            entry["wind_speed"] = records[i].get('FF')
-            entry["wind_direction"] = records[i].get('DD')
-            entry["clouds"] = records[i].get('N')
-            entry["pop"] = records[i].get('wwP')
-
-            #entry["feels_like"] = hour_entry["feels_like"]
-            #entry["icon"] = self.get_icon_from_openweathermap_weathercode(hour_entry["weather"][0]["id"],
-            #                                                              self.is_daytime(self.location_lat,
-            #                                                                              self.location_long))
-            #entry["description"] = hour_entry["weather"][0]["description"].title()
+            entry["dt"] = datetime.datetime.timestamp(hourly["times"][i])
+            entry["temperature"] = self.k_to_c(hourly["temperature"][i])
+            entry["wind_speed"] = hourly["wind_speed"][i]
+            entry["wind_direction"] = self.wind_deg2txt(hourly["wind_direction"][i])
+            entry["clouds"] = hourly["clouds"][i]
+            entry["pop"] = hourly["pop"][i]/100.0
+            entry["icon"] = self.get_icon()
+            entry["description"] = ""
 
             forecast.append(entry)
 
         return forecast
 
     def get_daily_forecast(self):
-        return {}
+        daily = self.df.sort_values(by = 'times').groupby(by=self.df['times'].dt.date, group_keys = True).agg(
+            {
+                'temperature': ['min', 'max'],
+                'wind_speed': ['min', 'max', 'mean', 'median'],
+                'wind_direction': ['mean', 'median'],
+                'clouds': ['min', 'max', 'mean', 'median'],
+                'pop': ['min', 'max', 'mean', 'median']
+            }
+        )
 
-def main():
-    weather = DWD(10853, "metric").get_weather()
+        daily_dict = daily.to_dict()
 
-    print(weather)
+        forecast = []
+        for day_index in daily.index:
+            entry = {}
+            entry["dt"] = datetime.datetime.timestamp(datetime.datetime.combine(day_index, datetime.time.fromisoformat("00:00:00")))
+            entry["temperatureMin"] = self.k_to_c(daily_dict['temperature', 'min'][day_index])
+            entry["temperatureMax"] = self.k_to_c(daily_dict['temperature', 'max'][day_index])
+            entry["pop"] = daily_dict['pop', 'mean'][day_index]/100.0
+            entry["wind_speed"] = daily_dict['wind_speed', 'mean'][day_index]
+            entry["wind_direction"] = self.wind_deg2txt(daily_dict['wind_direction', 'mean'][day_index])
+            entry["clouds"] = daily_dict['clouds', 'mean'][day_index]
+            entry["icon"] = self.get_icon()
+            entry["description"] = ""
+            logging.debug(entry)
+            forecast.append(entry)
 
-if __name__ == "__main__":
-    main()
+        return forecast
