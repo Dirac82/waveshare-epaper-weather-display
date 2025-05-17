@@ -12,7 +12,7 @@ from  zipfile import ZipFile
 from io import BytesIO
 import json
 import xml.etree.ElementTree as ET
-from astral import LocationInfo
+from astral import Observer
 from astral.sun import sun
 import humanize
 import locale
@@ -206,7 +206,7 @@ def get_sunset_time():
     loc_lat_float = float(location_lat)
     loc_lon_float = float(location_long)
     dt = datetime.datetime.now(pytz.timezone("Europe/Berlin"))
-    observer = astral.Observer(latitude=loc_lat_float, longitude=loc_lon_float)
+    observer = Observer(latitude=loc_lat_float, longitude=loc_lon_float)
     s = sun(observer, date=dt)
     return s['sunset']
 
@@ -219,6 +219,6 @@ def get_sunrise_time():
     loc_lat_float = float(location_lat)
     loc_lon_float = float(location_long)
     dt = datetime.datetime.now(pytz.timezone("Europe/Berlin"))
-    observer = astral.Observer(latitude=loc_lat_float, longitude=loc_lon_float)
+    observer = Observer(latitude=loc_lat_float, longitude=loc_lon_float)
     s = sun(observer, date=dt)
     return s['sunrise']

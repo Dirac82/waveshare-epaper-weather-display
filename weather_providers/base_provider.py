@@ -81,7 +81,7 @@ class BaseWeatherProvider(ABC):
         """
 
         # adjust icon for sunrise and sunset
-        dt = datetime.datetime.now(pytz.utc)
+        dt = datetime.datetime.now(pytz.timezone("Europe/Berlin"))
         city = LocationInfo(location_lat, location_long)
         s = sun(city.observer, date=dt)
         verdict = False
