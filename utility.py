@@ -3,6 +3,8 @@ import logging
 import os
 import time
 from http.client import HTTPConnection
+
+import astral
 import requests
 import datetime
 import pytz
@@ -201,7 +203,22 @@ def get_sunset_time():
     """
     location_lat = os.getenv("WEATHER_LATITUDE", "51.5077")
     location_long = os.getenv("WEATHER_LONGITUDE", "-0.1277")
-    dt = datetime.datetime.now(pytz.utc)
-    city = LocationInfo(location_lat, location_long)
-    s = sun(city.observer, date=dt)
+    loc_lat_float = float(location_lat)
+    loc_lon_float = float(location_long)
+    dt = datetime.datetime.now(pytz.timezone("Europe/Berlin"))
+    observer = astral.Observer(latitude=loc_lat_float, longitude=loc_lon_float)
+    s = sun(observer, date=dt)
     return s['sunset']
+
+def get_sunrise_time():
+    """
+    Return the time at which sun rises
+    """
+    location_lat = os.getenv("WEATHER_LATITUDE", "51.5077")
+    location_long = os.getenv("WEATHER_LONGITUDE", "-0.1277")
+    loc_lat_float = float(location_lat)
+    loc_lon_float = float(location_long)
+    dt = datetime.datetime.now(pytz.timezone("Europe/Berlin"))
+    observer = astral.Observer(latitude=loc_lat_float, longitude=loc_lon_float)
+    s = sun(observer, date=dt)
+    return s['sunrise']

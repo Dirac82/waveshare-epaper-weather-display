@@ -4,6 +4,8 @@ import datetime
 import sys
 import os
 import logging
+
+import utility
 from weather_providers import openweathermap, dwd
 from utility import get_formatted_time, update_svg, configure_logging, configure_locale
 import textwrap
@@ -107,8 +109,8 @@ def main():
         'LOW_ONE': "{}{}".format(str(round(weather["current"]['temperatureMin'])), degrees),
         'HIGH_ONE': "{}{}".format(str(round(weather["current"]['temperatureMax'])), degrees),
         'ICON_ONE': weather["current"]["icon"],
-        'WEATHER_DESC_1': weather_desc[1],
-        'WEATHER_DESC_2': weather_desc[2],
+        'WEATHER_DESC_1': "Sonnenauf-/-untergang",#weather_desc[1],
+        'WEATHER_DESC_2': '{} / {}'.format(utility.get_sunrise_time().strftime("%H:%M"),utility.get_sunset_time().strftime("%H:%M")),#weather_desc[2],
         'TIME_NOW_FONT_SIZE': time_now_font_size,
         'TIME_NOW': datetime.datetime.now().strftime("%H:%M"),
         'HOUR_NOW': datetime.datetime.now().strftime("%H"),
