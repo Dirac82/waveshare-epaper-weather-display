@@ -119,7 +119,7 @@ def main():
         'ALERT_MESSAGE_VISIBILITY': "hidden"}
 
     for i in range(1, 13):
-        output_dict['WEATHER_HOUR_DATETIME_{:X} Uhr'.format(i)] = datetime.datetime.fromtimestamp(weather["hourly"][i]["dt"]).strftime("%H")
+        output_dict['WEATHER_HOUR_DATETIME_{:X}'.format(i)] = '{} Uhr'.format(datetime.datetime.fromtimestamp(weather["hourly"][i]["dt"]).strftime("%H"))
         output_dict['W_HOUR_TEMP_{:X}'.format(i)] =  "{}{}".format(str(round(weather["hourly"][i]["temperature"])), degrees)
         output_dict['W_HOUR_CLOUDS_{:X}'.format(i)] = "{}%".format(str(round(weather["hourly"][i]["clouds"])))
         output_dict['W_HOUR_POP_{:X}'.format(i)] = "{}%".format(str(round(weather["hourly"][i]["pop"]*100)))
