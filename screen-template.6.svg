@@ -9,9 +9,9 @@
     <rect width="800" height="480" id="fullbackground" fill="#ffffff" />
 
     <g id="heading">
-        <text x="10" y="50"
-              style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;font-family:Roboto;"
-              id="time">TIME_NOW</text>
+        <text x="10" y="30"
+              style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:16px;font-family:Roboto;"
+              id="time">Aktualisierung: TIME_NOW</text>
         <text x="780" y="50" text-anchor="end"
               style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:40px;font-family:Roboto;"
               id="date">DAY_ONE</text>
