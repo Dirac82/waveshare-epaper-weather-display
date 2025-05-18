@@ -1,12 +1,9 @@
-import array
 import datetime
-import json
 import logging
-import time
 import pandas as pd
-from  zipfile import ZipFile
-from io import StringIO, BytesIO
-from lxml import etree
+from zipfile import ZipFile
+from io import BytesIO
+import pytz
 from weather_providers.base_provider import BaseWeatherProvider
 
 try:  # Python 3
@@ -136,10 +133,18 @@ class DWD(BaseWeatherProvider):
         return weather
 
     def get_hourly_forecast(self):
-        hourly = self.df.sort_values(by ='times').head(14)
+        hourly = self.df.sort_values(by ='times')
+
+        # check for first entry that is not in the past
+        start = 0
+        time_now = pd.to_datetime(datetime.datetime.now(tz=pytz.timezone("Europe/Berlin")))
+        for i in hourly.index:
+            if hourly["times"][i] > time_now:
+                break
+            start = i
 
         forecast = []
-        for i in hourly.index:
+        for i in range(start, start+13):
             entry = {}
             entry["dt"] = datetime.datetime.timestamp(hourly["times"][i])
             entry["temperature"] = self.k_to_c(hourly["temperature"][i])
