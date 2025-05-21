@@ -60,7 +60,7 @@ class DWD(BaseWeatherProvider):
         logging.debug(f"Starting to parse station {self.location_id} xml...")
 
         # XML parsen
-        root = xml_data #etree.fromstring(xml_data)
+        root = xml_data
         ns = {
             'kml': 'http://www.opengis.net/kml/2.2',
             'dwd': 'https://opendata.dwd.de/weather/lib/pointforecast_dwd_extension_V1_0.xsd'
@@ -85,14 +85,13 @@ class DWD(BaseWeatherProvider):
         weather_data['times'] = times
 
         # Vorhersagewerte für die Zielstation extrahieren
-        forecasts = []
         for location in root.findall('.//kml:Placemark', ns):
             if location.find('kml:name', ns).text != str(self.location_id):
                 continue
             for param in location.findall('kml:ExtendedData/dwd:Forecast', ns):
                 variable = param.attrib['{https://opendata.dwd.de/weather/lib/pointforecast_dwd_extension_V1_0.xsd}elementName']
                 if variable in ("TTT", "FF", "DD", "N", "wwP"):
-                    param_value = param.find('dwd:value',ns)
+                    param_value = param.find('dwd:value', ns)
                     values = [float(v) if v not in ('NaN', '-') else None for v in param_value.text.strip().split()]
                     weather_data[param_map[variable]] = values
 
@@ -141,7 +140,7 @@ class DWD(BaseWeatherProvider):
         return weather
 
     def get_hourly_forecast(self):
-        hourly = self.df.sort_values(by ='times')
+        hourly = self.df.sort_values(by='times')
 
         # check for first entry that is not in the past
         start = 0
@@ -168,7 +167,7 @@ class DWD(BaseWeatherProvider):
         return forecast
 
     def get_daily_forecast(self):
-        daily = self.df.sort_values(by = 'times').groupby(by=self.df['times'].dt.date, group_keys = True).agg(
+        daily = self.df.sort_values(by='times').groupby(by=self.df['times'].dt.date, group_keys=True).agg(
             {
                 'temperature': ['min', 'max'],
                 'wind_speed': ['min', 'max', 'mean', 'median'],
@@ -185,7 +184,6 @@ class DWD(BaseWeatherProvider):
             if daily.index[i] > time_now:
                 break
             start = i
-
 
         daily_dict = daily[start:len(daily.index)].to_dict()
 
