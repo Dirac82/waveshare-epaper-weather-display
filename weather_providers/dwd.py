@@ -122,11 +122,19 @@ class DWD(BaseWeatherProvider):
                 'clouds': ['min', 'max', 'mean', 'median'],
                 'pop': ['min', 'max', 'mean', 'median']
             }
-        ).head(1)
+        )
+
+        # check for first entry that is not in the past
+        start = 0
+        time_now = datetime.datetime.today().date()
+        for i in range(0, len(weather_data.index)):
+            if weather_data.index[i] > time_now:
+                break
+            start = i
 
         weather = {}
-        weather["temperatureMin"] = self.k_to_c(weather_data["temperature", "min"].values[0])
-        weather["temperatureMax"] = self.k_to_c(weather_data["temperature", "max"].values[0])
+        weather["temperatureMin"] = self.k_to_c(weather_data["temperature", "min"].values[start])
+        weather["temperatureMax"] = self.k_to_c(weather_data["temperature", "max"].values[start])
         weather["icon"] = self.get_icon()
         weather["description"] = ""
         logging.debug(weather)
@@ -170,7 +178,16 @@ class DWD(BaseWeatherProvider):
             }
         )
 
-        daily_dict = daily.to_dict()
+        # check for first entry that is not in the past
+        start = 0
+        time_now = datetime.datetime.today().date()
+        for i in range(0, len(daily.index)):
+            if daily.index[i] > time_now:
+                break
+            start = i
+
+
+        daily_dict = daily[start:len(daily.index)].to_dict()
 
         forecast = []
         for day_index in daily.index:
